@@ -74,14 +74,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 .approach-step-title{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
 .approach-step-desc{font-size:14px;color:var(--grey);line-height:1.65}
 @media(max-width:960px){.approach-cards{grid-template-columns:1fr}.approach-steps{grid-template-columns:1fr}}
-.case-study{background:var(--anthracite);border:1px solid var(--border);border-top:2px solid var(--gold);padding:48px 44px}
-.cs-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
-.cs-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.cs-cell{background:var(--anthracite);padding:28px 24px}
-.cs-cell-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-d);margin-bottom:10px}
-.cs-cell-text{font-size:14px;color:var(--grey);line-height:1.65}
-.cs-cell.result{background:var(--black-deep,#050505)}
-.cs-cell.result .cs-cell-text{font-size:16px;font-weight:700;color:var(--gold);letter-spacing:-.01em;line-height:1.4}
 .accordion{border:1px solid var(--border)}.acc-item{border-bottom:1px solid var(--border)}.acc-item:last-child{border-bottom:none}
 .acc-trigger{width:100%;background:none;border:none;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;text-align:left;transition:background .2s}
 .acc-trigger:hover{background:rgba(255,255,255,.02)}.acc-trigger.open{background:var(--gold-dim)}
@@ -129,8 +121,8 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 .fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease-out,transform .65s ease-out}.fi.v{opacity:1;transform:translateY(0)}
 .fi.d1{transition-delay:.10s}.fi.d2{transition-delay:.20s}.fi.d3{transition-delay:.30s}.fi.d4{transition-delay:.40s}
 .form-response-time{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--gold-dim);border-left:2px solid var(--gold);margin-bottom:24px;font-size:13px;font-weight:600;color:var(--white)}
-@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.cs-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr;gap:56px}.cross-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.bio-strip{flex-direction:column;align-items:flex-start;gap:20px}}
-@media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.acc-trigger{padding:22px 20px}.acc-body{padding:0 20px 24px}.cross-grid{grid-template-columns:1fr}.case-study{padding:32px 24px}.bio-strip{padding:28px 22px}}
+@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.cta-grid{grid-template-columns:1fr;gap:56px}.cross-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.bio-strip{flex-direction:column;align-items:flex-start;gap:20px}}
+@media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.acc-trigger{padding:22px 20px}.acc-body{padding:0 20px 24px}.cross-grid{grid-template-columns:1fr}.bio-strip{padding:28px 22px}}
 @media(max-width:420px){.btn{padding:16px 24px;font-size:.82rem}}
 </style>
 </head>
@@ -186,20 +178,14 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
     <div class="approach-steps">
       <div class="fi d1"><div class="approach-step-num">01</div><div class="approach-step-title">Comprendere il contesto</div><p class="approach-step-desc">Uso personale o spaccio non si decide in aula. Si decide prima, nella fase delle indagini, con gli elementi che il PM raccoglie e quelli che non raccoglie.</p></div>
       <div class="fi d2"><div class="approach-step-num">02</div><div class="approach-step-title">Proteggere dalla narrazione</div><p class="approach-step-desc">Bilancino, contante, precedenti: il profilo da spacciatore si costruisce con indizi. La difesa lo smonta elemento per elemento.</p></div>
-      <div class="fi d3"><div class="approach-step-num">03</div><div class="approach-step-title">Riqualificare il fatto</div><p class="approach-step-desc">Ho ottenuto la riqualificazione in uso personale anche con quantita' che l'accusa definiva incompatibili. Dove gli altri vedono un muro, io cerco la crepa.</p></div>
+      <div class="fi d3"><div class="approach-step-num">03</div><div class="approach-step-title">Riqualificare il fatto</div><p class="approach-step-desc">La riqualificazione in uso personale si costruisce nella fase delle indagini: documentazione del consumo abituale, ricostruzione del contesto personale, perizie tossicologiche. Dove l'accusa vede un muro, la difesa cerca le crepe procedurali.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec" style="background:var(--anthracite)">
-  <div class="wrap"><p class="lbl fi">Case study</p><h2 class="st fi d1" style="margin-bottom:44px">Un caso.<br><em>Un risultato.</em></h2>
-    <div class="case-study fi d2"><p class="cs-label">Caso — Detenzione a fini di spaccio</p>
-      <div class="cs-grid">
-        <div class="cs-cell"><div class="cs-cell-label">La situazione</div><div class="cs-cell-text">Fermato con 100g di marijuana e bilancino di precisione. Il PM aveva costruito il profilo accusatorio da spacciatore sulla base degli elementi accessori.</div></div>
-        <div class="cs-cell"><div class="cs-cell-label">La strategia</div><div class="cs-cell-text">La difesa ha lavorato sulla riqualificazione del fatto, smontando elemento per elemento il profilo costruito dall'accusa. I dettagli della strategia sono coperti da segreto professionale.</div></div>
-        <div class="cs-cell result"><div class="cs-cell-label">Il risultato</div><div class="cs-cell-text">Riqualificato in detenzione per uso personale. Escluso il reato di spaccio.</div></div>
-      </div>
-    </div>
+  <div class="wrap"><p class="lbl fi">Come si imposta la difesa</p><h2 class="st fi d1" style="margin-bottom:32px">La qualificazione del fatto<br><em>si decide prima dell'aula.</em></h2>
+    <p class="bt fi d2" style="max-width:740px;color:var(--white)">Nei procedimenti per stupefacenti la differenza tra uso personale e spaccio si gioca quasi sempre sugli stessi elementi: la quantità, il modo in cui la sostanza era confezionata, la presenza di accessori (bilancino, contante), il contesto personale del soggetto. Il PM costruisce il profilo dello spacciatore dall'insieme di questi indizi. La difesa lavora elemento per elemento: usi alternativi degli accessori, documentazione del consumo abituale, ricostruzione del contesto. Si fa nella fase delle indagini — in udienza, è quasi sempre troppo tardi.</p>
   </div>
 </section>
 
@@ -226,7 +212,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 
 <div class="cred-bar"><div class="cred-inner">
   <div class="cred-item fi"><div class="cred-num">18+</div><div class="cred-lbl">Anni di difesa penale</div></div>
-  <div class="cred-item fi d1"><div class="cred-num">Appello</div><div class="cred-lbl">I casi vinti in secondo grado che hanno riscritto condanne di primo grado.</div></div>
+  <div class="cred-item fi d1"><div class="cred-num">Cassazione</div><div class="cred-lbl">Iscritto al patrocinio in Cassazione</div></div>
   <div class="cred-item fi d2"><div class="cred-num">Riservatezza</div><div class="cred-lbl">Nessuno sapra'. Mai.</div></div>
 </div></div>
 
