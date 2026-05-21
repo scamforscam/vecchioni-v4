@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build / cache
+dist/
+build/
+.cache/
+.parcel-cache/
+.tmp/
+
+# Local Puppeteer artifacts (uncomment if you don't want screenshots in the repo)
+# screenshot-*.png
