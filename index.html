@@ -148,10 +148,20 @@ footer{background:var(--black-deep);border-top:1px solid var(--gold);padding:56p
 .approach-step-desc{font-size:14px;color:var(--grey);line-height:1.65}
 
 /* FAQ */
-.faq-grid{display:flex;flex-direction:column;gap:0;border:1px solid var(--border);margin-top:48px}
-.faq-item{border-bottom:1px solid var(--border);padding:28px 32px}.faq-item:last-child{border-bottom:none}
-.faq-q{font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:10px;letter-spacing:-.01em}
-.faq-a{font-size:14px;color:var(--grey);line-height:1.7;max-width:720px}
+.faq-layout{display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start;margin-top:48px}
+.faq-grid{display:flex;flex-direction:column;border:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}.faq-item:last-child{border-bottom:none}
+.faq-trigger{width:100%;background:none;border:none;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;text-align:left;transition:background .2s;font-family:inherit;color:inherit}
+.faq-trigger:hover{background:rgba(255,255,255,.02)}
+.faq-trigger.open{background:var(--gold-dim)}
+.faq-q{font-size:1.05rem;font-weight:700;color:var(--white);letter-spacing:-.01em;line-height:1.4;margin:0}
+.faq-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);transition:all .3s;color:var(--gold)}
+.faq-trigger.open .faq-icon{background:var(--gold);border-color:var(--gold);color:var(--black);transform:rotate(45deg)}
+.faq-panel{padding:0 28px 24px}
+.faq-panel[hidden]{display:none}
+.faq-a{font-size:14px;color:var(--grey);line-height:1.7;max-width:720px;margin:0}
+.faq-aside{position:sticky;top:120px;display:flex;align-items:center;justify-content:center;min-height:240px}
+.faq-mark{width:160px;height:160px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:600;font-size:3.5rem;color:var(--gold);letter-spacing:-.04em;background:var(--anthracite);box-shadow:0 8px 32px rgba(0,0,0,.3)}
 
 /* AREA CARDS UNIFORM HEIGHT */
 .areas-grid{align-items:stretch}
@@ -201,7 +211,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 
 /* RESPONSIVE */
 @media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.areas-grid{grid-template-columns:repeat(2,1fr)}.chi-grid{grid-template-columns:1fr;gap:48px}.chi-img-wrap{order:-1}}
-@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.pillars{grid-template-columns:1fr}.risultati-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr;gap:56px}.footer-grid{grid-template-columns:1fr 1fr}.approach-steps{grid-template-columns:1fr}.faq-item{padding:22px 20px}}
+@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.pillars{grid-template-columns:1fr}.risultati-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr;gap:56px}.footer-grid{grid-template-columns:1fr 1fr}.approach-steps{grid-template-columns:1fr}.faq-layout{grid-template-columns:1fr;gap:32px}.faq-aside{display:none}.faq-trigger{padding:20px 18px}.faq-panel{padding:0 18px 20px}}
 @media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.areas-grid{grid-template-columns:1fr}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.quote-block{padding:32px 28px}.media-nums{flex-direction:column;gap:24px}.media-num-sep{width:40px;height:1px}.chi-badges{flex-direction:column;gap:10px}}
 @media(max-width:420px){.btn{padding:16px 24px;font-size:.82rem}}
 
@@ -397,12 +407,61 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
   <div class="wrap">
     <p class="lbl fi">Domande</p>
     <h2 class="st fi d1">Quello che stai pensando.</h2>
-    <div class="faq-grid fi d2">
-      <div class="faq-item"><div class="faq-q">"Quanto costa?"</div><p class="faq-a">Il primo contatto serve a valutare se posso aiutarti. Onorari concordati per iscritto, in base alla complessità del caso e ai parametri forensi.</p></div>
-      <div class="faq-item"><div class="faq-q">"Chi lo sapra'?"</div><p class="faq-a">Il segreto professionale copre tutto, incluso il fatto stesso che mi hai cercato.</p></div>
-      <div class="faq-item"><div class="faq-q">"E' troppo tardi?"</div><p class="faq-a">Nella maggior parte dei casi, no. Nel penale però il tempo gioca per l'accusa: senza una difesa attiva, la sua versione resta l'unica nel fascicolo.</p></div>
-      <div class="faq-item"><div class="faq-q">"Posso cambiare avvocato?"</div><p class="faq-a">Si', in qualsiasi momento. E' un tuo diritto.</p></div>
-      <div class="faq-item"><div class="faq-q">"Il mio avvocato non e' un penalista."</div><p class="faq-a">Un buon avvocato non è automaticamente un buon penalista. In un procedimento penale serio serve pratica esclusivamente penalistica e quotidiana.</p></div>
+    <div class="faq-layout fi d2">
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq6" type="button">
+            <span class="faq-q">"E se sono colpevole?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq6" hidden><p class="faq-a">Non sono qui per giudicarti, per quello ci sono già i giudici. Difendo le persone, non le azioni. Quello che mi racconti resta coperto dal segreto professionale e serve solo a costruire la difesa migliore possibile.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq7" type="button">
+            <span class="faq-q">"Cosa succede quando ti contatto?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq7" hidden><p class="faq-a">Mi racconti cosa è successo e io ti dico con onestà se e come posso aiutarti. Il primo contatto serve a capire la situazione, senza che tu debba decidere niente sul momento.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq1" type="button">
+            <span class="faq-q">"Quanto costa?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq1" hidden><p class="faq-a">Il primo contatto serve a valutare se posso aiutarti. Onorari concordati per iscritto, in base alla complessità del caso e ai parametri forensi.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq2" type="button">
+            <span class="faq-q">"Chi lo sapra'?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq2" hidden><p class="faq-a">Il segreto professionale copre tutto, incluso il fatto stesso che mi hai cercato.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq3" type="button">
+            <span class="faq-q">"E' troppo tardi?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq3" hidden><p class="faq-a">Nella maggior parte dei casi, no. Nel penale però il tempo gioca per l'accusa: senza una difesa attiva, la sua versione resta l'unica nel fascicolo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq4" type="button">
+            <span class="faq-q">"Posso cambiare avvocato?"</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq4" hidden><p class="faq-a">Si', in qualsiasi momento. E' un tuo diritto.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="fq5" type="button">
+            <span class="faq-q">"Il mio avvocato non e' un penalista."</span>
+            <span class="faq-icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-panel" id="fq5" hidden><p class="faq-a">Un buon avvocato non è automaticamente un buon penalista. In un procedimento penale serio serve pratica esclusivamente penalistica e quotidiana.</p></div>
+        </div>
+      </div>
+      <aside class="faq-aside" aria-hidden="true">
+        <div class="faq-mark">NV</div>
+      </aside>
     </div>
   </div>
 </section>
@@ -475,6 +534,7 @@ document.querySelectorAll('.fi').forEach(el=>io.observe(el));
 document.querySelectorAll('.hero .fi').forEach((el,i)=>setTimeout(()=>el.classList.add('v'),50+i*110));
 document.querySelectorAll('.cred-num').forEach(el=>{const cio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('counted');cio.unobserve(e.target)}})},{threshold:.3});cio.observe(el)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
+document.querySelectorAll('.faq-trigger').forEach(tr=>{tr.addEventListener('click',()=>{const id=tr.getAttribute('aria-controls'),p=document.getElementById(id),isOpen=tr.classList.contains('open');document.querySelectorAll('.faq-trigger').forEach(x=>{x.classList.remove('open');x.setAttribute('aria-expanded','false')});document.querySelectorAll('.faq-panel').forEach(x=>{x.hidden=true});if(!isOpen){tr.classList.add('open');tr.setAttribute('aria-expanded','true');p.hidden=false}})});
 const form=document.getElementById('contact-form'),succ=document.getElementById('form-success');
 if(form){form.addEventListener('submit',e=>{e.preventDefault();let v=true;['f-name','f-phone','f-msg'].forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){v=false;el.style.borderColor='rgba(201,168,76,.8)';setTimeout(()=>{el.style.borderColor=''},2500)}});if(!v)return;
 const btn=form.querySelector('.form-submit');btn.disabled=true;btn.textContent='Invio in corso…';
