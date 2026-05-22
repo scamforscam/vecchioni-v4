@@ -242,14 +242,14 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
     </div>
     <div class="fi d2"><div class="form-card"><div class="form-response-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Risposta personale entro 24 ore</div>
         <p class="form-card-title">Richiedi una consulenza riservata</p>
+        <p style="font-size:13px;color:var(--grey-d);margin-bottom:20px;line-height:1.55">Mi lasci nome e numero, la richiamo io. I dettagli del caso me li racconta direttamente — non li scriva qui.</p>
       <form id="contact-form" novalidate>
         <div class="form-group"><label for="f-name">Nome</label><input type="text" id="f-name" placeholder="Come ti chiami" required></div>
         <div class="form-group"><label for="f-phone">Telefono</label><input type="tel" id="f-phone" placeholder="Un numero dove posso chiamarti" required></div>
-        <div class="form-group"><label for="f-msg">Descrizione del caso</label><textarea id="f-msg" placeholder="Raccontami in due righe cosa è successo." required></textarea></div>
         <button type="submit" class="btn form-submit" style="text-transform:none;letter-spacing:.01em"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Invia richiesta</button>
       </form>
       <div class="form-success" id="form-success"><div class="success-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Richiesta ricevuta.</h3><p>Ti contatterò personalmente entro 24 ore.<br>Nel frattempo, non parlare del tuo caso con nessuno che non sia il tuo avvocato.</p></div>
-      <p class="form-gdpr">Inviando il modulo acconsenti al trattamento dei dati ai sensi del GDPR (Reg. UE 2016/679).</p>
+      <p class="form-gdpr">Inviando acconsenti al trattamento secondo l'<a href="privacy.html" style="color:var(--gold);text-decoration:underline">informativa privacy</a>.</p>
     </div></div>
   </div>
 </section>
@@ -283,7 +283,7 @@ document.querySelectorAll('.pdp-hero .fi').forEach((el,i)=>setTimeout(()=>el.cla
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
 document.querySelectorAll('.acc-trigger').forEach(tr=>{tr.addEventListener('click',()=>{const id=tr.getAttribute('data-target'),b=document.getElementById(id),o=b.classList.contains('open');document.querySelectorAll('.acc-body').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.acc-trigger').forEach(x=>{x.classList.remove('open');x.setAttribute('aria-expanded','false')});if(!o){b.classList.add('open');tr.classList.add('open');tr.setAttribute('aria-expanded','true')}})});
 const form=document.getElementById('contact-form'),succ=document.getElementById('form-success');
-if(form){form.addEventListener('submit',e=>{e.preventDefault();let v=true;['f-name','f-phone','f-msg'].forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){v=false;el.style.borderColor='rgba(201,168,76,.8)';setTimeout(()=>{el.style.borderColor=''},2500)}});if(!v)return;form.style.cssText='transition:opacity .35s ease,transform .35s ease;opacity:0;transform:translateY(8px)';setTimeout(()=>{form.style.display='none';succ.style.display='block';succ.style.opacity='0';succ.style.transition='opacity .4s ease';requestAnimationFrame(()=>{succ.style.opacity='1'})},360)})}
+if(form){form.addEventListener('submit',e=>{e.preventDefault();let v=true;['f-name','f-phone'].forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){v=false;el.style.borderColor='rgba(201,168,76,.8)';setTimeout(()=>{el.style.borderColor=''},2500)}});if(!v)return;form.style.cssText='transition:opacity .35s ease,transform .35s ease;opacity:0;transform:translateY(8px)';setTimeout(()=>{form.style.display='none';succ.style.display='block';succ.style.opacity='0';succ.style.transition='opacity .4s ease';requestAnimationFrame(()=>{succ.style.opacity='1'})},360)})}
 </script>
 <script src="chat-widget.js"></script>
 </body>
