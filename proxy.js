@@ -4,8 +4,8 @@ const cors = require('cors');
 const app = express();
 const PORT = 3001;
 
-/* ─── La tua API key Anthropic (server-side only) ─── */
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || 'INSERISCI_QUI_LA_TUA_API_KEY';
+/* ─── Anthropic API key — only from environment variable, never hardcoded ─── */
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 const SYSTEM_PROMPT = `Sei l'assistente riservato dello studio legale dell'Avv. Niccolò Vecchioni, penalista a Milano con 18+ anni di esperienza, abilitato alla Corte di Cassazione.
 
@@ -36,8 +36,8 @@ app.post('/api/chat', async (req, res) => {
     return res.status(400).json({ error: 'messages array required' });
   }
 
-  if (ANTHROPIC_API_KEY === 'INSERISCI_QUI_LA_TUA_API_KEY') {
-    return res.status(500).json({ error: 'API key not configured' });
+  if (!ANTHROPIC_API_KEY) {
+    return res.status(500).json({ error: 'API key not configured (set ANTHROPIC_API_KEY env var)' });
   }
 
   try {
@@ -73,8 +73,9 @@ app.post('/api/chat', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Proxy Anthropic attivo su http://localhost:${PORT}`);
   console.log('Endpoint: POST /api/chat');
-  if (ANTHROPIC_API_KEY === 'INSERISCI_QUI_LA_TUA_API_KEY') {
-    console.log('\n⚠️  API key non configurata!');
-    console.log('   Avvia con: ANTHROPIC_API_KEY=sk-ant-... node proxy.js');
+  if (!ANTHROPIC_API_KEY) {
+    console.warn('\n⚠️  ANTHROPIC_API_KEY environment variable not set');
+    console.warn('   Avvia con: ANTHROPIC_API_KEY=sk-ant-... node proxy.js');
+    console.warn('   Oppure crea un file .env (gitignored) e caricalo con dotenv');
   }
 });
