@@ -75,14 +75,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 @media(max-width:960px){.approach-cards{grid-template-columns:1fr}.approach-steps{grid-template-columns:1fr}}
 
 /* CASE STUDY */
-.case-study{background:var(--anthracite);border:1px solid var(--border);border-top:2px solid var(--gold);padding:48px 44px}
-.cs-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
-.cs-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.cs-cell{background:var(--anthracite);padding:28px 24px}
-.cs-cell-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey-d);margin-bottom:10px}
-.cs-cell-text{font-size:14px;color:var(--grey);line-height:1.65}
-.cs-cell.result{background:var(--black-deep,#050505)}
-.cs-cell.result .cs-cell-text{font-size:16px;font-weight:700;color:var(--gold);letter-spacing:-.01em;line-height:1.4}
 
 /* ACCORDION */
 .accordion{border:1px solid var(--border)}.acc-item{border-bottom:1px solid var(--border)}.acc-item:last-child{border-bottom:none}
@@ -138,8 +130,8 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 .fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease-out,transform .65s ease-out}.fi.v{opacity:1;transform:translateY(0)}
 .fi.d1{transition-delay:.10s}.fi.d2{transition-delay:.20s}.fi.d3{transition-delay:.30s}.fi.d4{transition-delay:.40s}
 .form-response-time{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--gold-dim);border-left:2px solid var(--gold);margin-bottom:24px;font-size:13px;font-weight:600;color:var(--white)}
-@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.cs-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr;gap:56px}.cross-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.bio-strip{flex-direction:column;align-items:flex-start;gap:20px}}
-@media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.acc-trigger{padding:22px 20px}.acc-body{padding:0 20px 24px}.cross-grid{grid-template-columns:1fr}.case-study{padding:32px 24px}.bio-strip{padding:28px 22px}}
+@media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.cta-grid{grid-template-columns:1fr;gap:56px}.cross-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.bio-strip{flex-direction:column;align-items:flex-start;gap:20px}}
+@media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.acc-trigger{padding:22px 20px}.acc-body{padding:0 20px 24px}.cross-grid{grid-template-columns:1fr}.bio-strip{padding:28px 22px}}
 @media(max-width:420px){.btn{padding:16px 24px;font-size:.82rem}}
 </style>
 </head>
@@ -158,7 +150,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
     <h1 class="fi d2">Ti hanno accusato di aver fatto del male a qualcuno.<br>La verità non si difende da sola.</h1>
     <p class="pdp-hero-sub fi d3">Un'accusa per lesioni, tentato omicidio o omicidio non è solo un problema legale. È la tua reputazione, la tua famiglia, la tua libertà. Senza una difesa costruita fin dall'inizio, la narrativa dell'accusa diventa l'unica narrativa.</p>
     <div class="cta-wrap fi d4"><a href="#contatti" class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.59 7.91a16 16 0 006.35 6.35l.77-.77a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Richiedi una consulenza riservata</a>
-    <p class="microcopy">🔒 Contatto riservato. Nessuno saprà che mi hai chiamato.</p></div>
+    <p class="microcopy">Contatto coperto dal segreto professionale.</p></div>
   </div>
 </div>
 
@@ -201,14 +193,8 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 </section>
 
 <section class="sec" style="background:var(--anthracite)">
-  <div class="wrap"><p class="lbl fi">Case study</p><h2 class="st fi d1" style="margin-bottom:44px">Un caso.<br><em>Un risultato.</em></h2>
-    <div class="case-study fi d2"><p class="cs-label">Caso — Tentato omicidio</p>
-      <div class="cs-grid">
-        <div class="cs-cell"><div class="cs-cell-label">La situazione</div><div class="cs-cell-text">Fermo in flagranza dopo una rissa. Ferite multiple sulla vittima. Testimoni oculari a carico. Custodia cautelare in carcere dal giorno zero. Il PM contestava tentato omicidio aggravato.</div></div>
-        <div class="cs-cell"><div class="cs-cell-label">La strategia</div><div class="cs-cell-text">I dettagli della strategia difensiva sono coperti da riservatezza professionale.</div></div>
-        <div class="cs-cell result"><div class="cs-cell-label">Il risultato</div><div class="cs-cell-text">Riqualificazione del fatto. Pena sensibilmente ridotta rispetto all'imputazione originaria.</div></div>
-      </div>
-    </div>
+  <div class="wrap"><p class="lbl fi">Come si imposta la difesa</p><h2 class="st fi d1" style="margin-bottom:32px">Dal fatto<br><em>alla ricostruzione.</em></h2>
+    <p class="bt fi d2" style="max-width:740px;color:var(--white)">Nei reati contro la persona la difesa si costruisce dalla ricostruzione del fatto. Le prove più forti per l'accusa — testimoni, intercettazioni, perizie mediche — sono spesso le più fragili tecnicamente. La difesa lavora sulla credibilità delle testimonianze, sulla catena di custodia degli accertamenti tecnici, sul rapporto causale tra condotta ed evento, sull'elemento soggettivo. È un lavoro che parte dal fascicolo, non dall'aula.</p>
   </div>
 </section>
 
@@ -220,7 +206,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
       <div class="acc-item"><button class="acc-trigger" aria-expanded="false" data-target="a2"><span class="acc-q">"Il referto medico è pesante."</span><span class="acc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
       <div class="acc-body" id="a2"><p class="acc-a">Il referto descrive le conseguenze, non le responsabilità. <em>Sono due cose completamente diverse.</em> Le lesioni documentate parlano di ciò che è successo al corpo della persona offesa, non di chi ne è responsabile, con quale intensità di dolo, e in quale contesto. La consulenza medico-legale della difesa lavora esattamente su questo spazio.</p></div></div>
       <div class="acc-item"><button class="acc-trigger" aria-expanded="false" data-target="a3"><span class="acc-q">"Sono già in carcere."</span><span class="acc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-      <div class="acc-body" id="a3"><p class="acc-a">L'udienza di convalida è il primo campo di battaglia. <em>Se sei in custodia, c'è una finestra temporale stretta ma concreta.</em> Il Tribunale del Riesame è il secondo. La difesa deve essere attiva dall'istante in cui scatta la misura: ogni giorno di detenzione preventiva non contestata costruisce un quadro a sfavore.</p></div></div>
+      <div class="acc-body" id="a3"><p class="acc-a">L'udienza di convalida è il primo campo di battaglia. <em>Se sei in custodia, c'è una finestra temporale stretta ma concreta.</em> Il Tribunale del Riesame è il secondo. La difesa deve essere attiva dall'istante in cui scatta la misura: la detenzione preventiva non contestata costruisce un quadro a sfavore con il passare delle settimane.</p></div></div>
       <div class="acc-item"><button class="acc-trigger" aria-expanded="false" data-target="a4"><span class="acc-q">"Mi sono solo difeso. Perche' mi accusano?"</span><span class="acc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
       <div class="acc-body" id="a4"><p class="acc-a">La legittima difesa ha confini precisi nel codice. <em>Non basta dire "mi sono difeso"</em> — va dimostrato che la reazione era proporzionata e che non c'erano alternative. In una rissa, la Cassazione riconosce la legittima difesa solo quando chi si difende assume una posizione passiva. La valutazione va fatta sul caso specifico.</p></div></div>
       <div class="acc-item"><button class="acc-trigger" aria-expanded="false" data-target="a5"><span class="acc-q">"La vittima ha ritirato la querela. Perche' il processo va avanti?"</span><span class="acc-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
@@ -235,8 +221,8 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 
 <div class="cred-bar"><div class="cred-inner">
   <div class="cred-item fi"><div class="cred-num">18+</div><div class="cred-lbl">Anni di difesa penale</div></div>
-  <div class="cred-item fi d1"><div class="cred-num">Appello</div><div class="cred-lbl">I casi vinti in secondo grado che hanno riscritto condanne di primo grado.</div></div>
-  <div class="cred-item fi d2"><div class="cred-num">Riservatezza</div><div class="cred-lbl">Nessuno sapra'. Mai.</div></div>
+  <div class="cred-item fi d1"><div class="cred-num">Cassazione</div><div class="cred-lbl">Iscritto al patrocinio in Cassazione</div></div>
+  <div class="cred-item fi d2"><div class="cred-num">Riservatezza</div><div class="cred-lbl">Coperta dal segreto professionale</div></div>
 </div></div>
 
 <!-- MINI BIO -->
@@ -250,7 +236,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
       <div>
         <div class="bio-name">Avv. Niccolò Vecchioni</div>
         <div class="bio-role">Penalista — Foro di Milano</div>
-        <p class="bio-text">Diciotto anni di difesa penale a Milano. Casi di rilevanza mediatica nazionale.</p>
+        <p class="bio-text">Diciotto anni di difesa penale a Milano. Difesa a tutti i gradi: Tribunale, Appello, Cassazione.</p>
       </div>
       <div style="margin-left:auto;flex-shrink:0"><a href="#contatti" class="btn" style="padding:14px 28px;font-size:.82rem">Contattami</a></div>
     </div>
@@ -262,7 +248,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
     <div class="fi"><p class="lbl">Contatti</p><h2 class="st">Hai letto fin qui perché il problema esiste.<br><em>Il passo successivo è una telefonata.</em></h2>
       <div class="cta-urgency">Nei reati contro la persona le prime ore sono decisive. Ogni dichiarazione spontanea, ogni silenzio, ogni mossa sbagliata lascia traccia. La difesa deve essere attiva da subito.</div>
       <p class="bt" style="margin-bottom:28px">Raccontami cosa è successo. In 24 ore sai se posso aiutarti e come affrontare le prossime settimane senza commettere errori che peserebbero sul processo.</p>
-      <div class="trust-list"><div class="trust-item"><div class="trust-dot"></div>Riservatezza assoluta — nessuna informazione condivisa</div><div class="trust-item"><div class="trust-dot"></div>Risposta garantita entro 24 ore</div><div class="trust-item"><div class="trust-dot"></div>Urgenze penali gestite h24</div></div>
+      <div class="trust-list"><div class="trust-item"><div class="trust-dot"></div>Contatto coperto dal segreto professionale</div><div class="trust-item"><div class="trust-dot"></div>Risposta personale entro 24 ore</div><div class="trust-item"><div class="trust-dot"></div>Arresto o fermo: contatto immediato</div></div>
     </div>
     <div class="fi d2"><div class="form-card"><div class="form-response-time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Risposta personale entro 24 ore</div>
         <p class="form-card-title">Richiedi una consulenza riservata</p>
@@ -270,7 +256,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
         <div class="form-group"><label for="f-name">Nome</label><input type="text" id="f-name" placeholder="Come ti chiami" required></div>
         <div class="form-group"><label for="f-phone">Telefono</label><input type="tel" id="f-phone" placeholder="Un numero dove posso chiamarti" required></div>
         <div class="form-group"><label for="f-msg">Descrizione del caso</label><textarea id="f-msg" placeholder="Raccontami in due righe cosa è successo." required></textarea></div>
-        <button type="submit" class="btn form-submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>INVIA — NESSUNO SAPRÀ CHE MI HAI CONTATTATO</button>
+        <button type="submit" class="btn form-submit" style="text-transform:none;letter-spacing:.01em"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Invia richiesta</button>
       </form>
       <div class="form-success" id="form-success"><div class="success-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Richiesta ricevuta.</h3><p>Ti contatterò personalmente entro 24 ore.<br>Nel frattempo, non parlare del tuo caso con nessuno che non sia il tuo avvocato.</p></div>
       <p class="form-gdpr">Inviando il modulo acconsenti al trattamento dei dati ai sensi del GDPR (Reg. UE 2016/679).</p>
@@ -288,9 +274,9 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 </section>
 
 <footer><div class="footer-grid">
-  <div><div class="nav-mark" style="width:36px;height:36px;font-size:12px">NV</div><div class="footer-brand-name">Avv. Niccolò Vecchioni</div><p class="footer-brand-desc">Penalista a Milano. Difesa in procedimenti penali complessi, dai reati di strada ai processi ad alta esposizione mediatica. Riservatezza assoluta.</p></div>
+  <div><div class="nav-mark" style="width:36px;height:36px;font-size:12px">NV</div><div class="footer-brand-name">Avv. Niccolò Vecchioni</div><p class="footer-brand-desc">Penalista a Milano. Difesa in procedimenti penali complessi a tutti i gradi di giudizio. Segreto professionale.</p></div>
   <div class="footer-col"><p class="footer-col-title">Studio</p><address>Via Cerva, 6<br>20122 Milano<br><br>Foro di Milano</address></div>
-  <div class="footer-col"><p class="footer-col-title">Contatti</p><p><a href="mailto:niccolo.vecchioni@nclaw.it">niccolo.vecchioni@nclaw.it</a><br><br><span style="font-size:11px;color:var(--grey-d)">Urgenze penali h24</span></p></div>
+  <div class="footer-col"><p class="footer-col-title">Contatti</p><p><a href="mailto:niccolo.vecchioni@nclaw.it">niccolo.vecchioni@nclaw.it</a><br><br><span style="font-size:11px;color:var(--grey-d)">Arresto o fermo: recapito d'emergenza</span></p></div>
   <div class="footer-col"><p class="footer-col-title">Difesa penale</p><p><a href="reati-contro-la-persona.html">Reati contro la persona</a><br><a href="rapine-reati-predatori.html">Rapine e reati predatori</a><br><a href="stupefacenti.html">Stupefacenti</a><br><a href="index.html#aree">Circolazione stradale</a><br><a href="index.html#aree">Reati di strada e giovani</a></p></div>
 </div>
 <div class="footer-bottom"><p class="footer-legal">Iscritto all'Ordine degli Avvocati di Milano<br>© 2026 Avv. Niccolò Vecchioni. Tutti i diritti riservati.</p><div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a><a href="#">Note legali</a></div></div>
