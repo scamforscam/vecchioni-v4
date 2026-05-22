@@ -95,15 +95,12 @@ body{font-family:var(--font-sans);background:var(--black);color:var(--white);-we
 .pillar-title{font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:12px;letter-spacing:-.01em}
 .pillar-text{font-size:14px;color:var(--grey);line-height:1.65}
 
-/* RISULTATI */
-.risultati-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.ris-card{background:var(--anthracite);border:1px solid var(--border);padding:40px 32px;position:relative;overflow:hidden}
-.ris-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold)}
-.ris-badge{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.ris-verdict{font-size:1.2rem;font-weight:700;color:var(--white);letter-spacing:-.02em;margin-bottom:16px;line-height:1.3}
-.ris-desc{font-size:14px;color:var(--grey);line-height:1.65}
-.ris-result{font-size:14px;font-weight:700;color:var(--gold);margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
-.ris-result strong{color:var(--white);text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+/* DISCREZIONE */
+.disc-wrap{max-width:760px}
+.disc-body{margin-top:40px}
+.disc-body p{font-size:1.0625rem;line-height:1.75;margin-bottom:22px}
+.disc-body p:last-child{margin-bottom:0}
+.disc-cta{margin-top:44px}
 
 /* MEDIA */
 .media-strip{display:flex;align-items:center;gap:32px;padding:40px 0}
@@ -164,10 +161,6 @@ footer{background:var(--black-deep);border-top:1px solid var(--gold);padding:56p
 .pillar-icon{width:48px;height:48px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:20px}
 .pillars{align-items:stretch}
 
-/* RESULT BADGES */
-.ris-result-badge{display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}
-.ris-result-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:#4CAF50}
-
 /* CRED COUNTER */
 @keyframes credCount{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .cred-num.counted{animation:credCount .6s ease-out}
@@ -178,9 +171,6 @@ footer{background:var(--black-deep);border-top:1px solid var(--gold);padding:56p
 .chi-badges{display:flex;gap:20px;margin-top:32px;flex-wrap:wrap}
 .chi-badge{display:flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid var(--border);font-size:12px;font-weight:600;color:var(--grey)}
 .chi-badge svg{color:var(--gold);flex-shrink:0}
-
-/* RESULTS CTA */
-.results-cta{margin-top:48px;text-align:center}
 
 /* QUOTE FINALE CTA */
 .qf-cta{margin-top:36px}
@@ -228,10 +218,10 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 <a class="skip-link" href="#main">Vai al contenuto</a>
 <nav id="nav"><div class="nav-inner">
   <a href="index.html" class="nav-logo"><div class="nav-mark">NV</div><div><div class="nav-name">Avv. Vecchioni</div><span class="nav-role">Penalista — Milano</span></div></a>
-  <ul class="nav-links"><li><a href="#aree">Aree</a></li><li><a href="#risultati">Risultati</a></li><li><a href="#chi-sono">Chi Sono</a></li><li><a href="#contatti" class="nav-cta">Consulenza riservata</a></li></ul>
+  <ul class="nav-links"><li><a href="#aree">Aree</a></li><li><a href="#risultati">Discrezione</a></li><li><a href="#chi-sono">Chi Sono</a></li><li><a href="#contatti" class="nav-cta">Consulenza riservata</a></li></ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mob-menu" id="mob-menu"><ul><li><a href="#aree" class="ml">Aree di competenza</a></li><li><a href="#chi-sono" class="ml">Chi Sono</a></li><li><a href="#risultati" class="ml">Risultati</a></li><a href="#contatti" class="mob-cta ml">Richiedi una consulenza riservata</a></ul></div>
+<div class="mob-menu" id="mob-menu"><ul><li><a href="#aree" class="ml">Aree di competenza</a></li><li><a href="#chi-sono" class="ml">Chi Sono</a></li><li><a href="#risultati" class="ml">Discrezione</a></li><a href="#contatti" class="mob-cta ml">Richiedi una consulenza riservata</a></ul></div>
 
 <!-- HERO SPLIT SCREEN -->
 <div class="hero" id="main">
@@ -385,33 +375,20 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
   </div>
 </section>
 
-<!-- RISULTATI -->
+<!-- DISCREZIONE -->
 <section class="sec" id="risultati" style="background:var(--anthracite)">
-  <div class="wrap">
-    <p class="lbl fi">Risultati</p>
-    <h2 class="st fi d1">Non ti racconto cosa so fare.<br><em>Ti racconto cos'è successo.</em></h2>
-    <div class="risultati-grid">
-      <div class="ris-card fi d1">
-        <div class="ris-badge">Stupefacenti</div>
-        <div class="ris-verdict">Trovato con droga e bilancino → assolto</div>
-        <p class="ris-desc">Fermato in casa con marijuana, hashish e un bilancino di precisione. Impostazione accusatoria orientata allo spaccio; l'accusa chiedeva la condanna.</p>
-        <div class="ris-result"><span class="ris-result-badge">Esito positivo</span><br>Già in sede di convalida la condotta viene riqualificata come fatto di lieve entità per uso personale. In rito abbreviato, <strong>assoluzione piena dall'accusa di spaccio</strong>.</div>
-      </div>
-      <div class="ris-card fi d2">
-        <div class="ris-badge">Reati predatori e armi</div>
-        <div class="ris-verdict">Sparatoria notturna → accusa di rapina caduta</div>
-        <p class="ris-desc">Sparatoria nella movida milanese, più imputati, forte pressione mediatica. Contestata anche la rapina in concorso.</p>
-        <div class="ris-result"><span class="ris-result-badge">Esito positivo</span><br><strong>Accusa di rapina esclusa in appello</strong>. Pena ridotta di circa il 46% rispetto al primo grado. Esito <strong>confermato in Cassazione</strong>.</div>
-      </div>
-      <div class="ris-card fi d3">
-        <div class="ris-badge">Misure cautelari</div>
-        <div class="ris-verdict">Aggravato in carcere → di nuovo libero</div>
-        <p class="ris-desc">In corso di procedimento la misura cautelare viene inasprita fino alla custodia in carcere.</p>
-        <div class="ris-result"><span class="ris-result-badge">Esito positivo</span><br>Istanza al Tribunale del Riesame accolta: <strong>revoca del carcere</strong> e ritorno a una misura non detentiva.</div>
-      </div>
+  <div class="wrap disc-wrap">
+    <p class="lbl fi">Discrezione</p>
+    <h2 class="st fi d1">I miei risultati non li leggi qui.<br><em>E non è un caso.</em></h2>
+    <div class="disc-body fi d2">
+      <p>Ogni studio mette in vetrina le sue vittorie. Io no — e dovrebbe dirti qualcosa.</p>
+      <p>Chi pubblica il caso di un cliente per convincerne un altro, <strong>prima o poi pubblicherà anche il tuo.</strong></p>
+      <p>Il giorno in cui ho preso la prima difesa ho fatto una scelta e non l'ho più cambiata: quello che riguarda chi mi dà fiducia resta tra noi. Senza eccezioni.</p>
+      <p>Se per decidere ti serve vedere uno scoreboard, non sono l'avvocato che cerchi — e va bene così.</p>
+      <p>Se invece hai capito che <strong>la stessa riservatezza che proteggerà te è quella che mi vieta di sbandierare gli altri</strong>, allora abbiamo già qualcosa in comune.</p>
+      <p>Quello che posso fare per te lo capiamo parlando. In privato. Come si fa tra persone serie.</p>
     </div>
-    <div class="results-cta fi"><a href="#contatti" class="btn" style="padding:16px 40px;font-size:.85rem">HAI UN CASO SIMILE? PARLIAMONE →</a></div>
-    <p style="color:#555;font-size:0.75rem;margin-top:28px;max-width:620px;line-height:1.6;text-align:center;margin-left:auto;margin-right:auto">* I casi descritti sono anonimizzati e rappresentativi della tipologia di procedimenti gestiti dallo studio. I dettagli sono stati modificati per tutelare la riservatezza dei clienti.</p>
+    <div class="disc-cta fi d3"><a href="#contatti" class="btn" style="text-transform:none;letter-spacing:.01em">Parliamone in privato</a></div>
   </div>
 </section>
 
