@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 /* ─── Anthropic API key — only from environment variable, never hardcoded ─── */
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
