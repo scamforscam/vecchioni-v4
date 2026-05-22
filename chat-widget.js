@@ -1,38 +1,12 @@
 (function(){
 'use strict';
 
-/* ── API Key Anthropic — inserisci qui la tua key ── */
-const ANTHROPIC_API_KEY = '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';
-
-const SYSTEM_PROMPT = `Sei l'assistente riservato dello studio legale dell'Avv. Niccolò Vecchioni, penalista a Milano con 18+ anni di esperienza. Studio NC Law, Via Cerva 6, Milano.
-
-Aree di competenza dello studio:
-- Reati contro la persona (lesioni, risse, sequestro di persona, tentato omicidio)
-- Rapine e reati predatori
-- Stupefacenti
-- Reati legati alla street life e ai giovani (resistenza a pubblico ufficiale, porto abusivo d'arma, reati di gruppo)
-- Circolazione stradale e guida in stato di ebbrezza
-
-NON dire MAI che lo studio si occupa di:
-- Criminalità organizzata / 416 bis / mafia
-- Penale d'impresa / reati societari
-- Diffamazione / reati online
-- Sicurezza sul lavoro
-
-Se ti chiedono di queste aree, rispondi onestamente: "Lo studio Vecchioni è specializzato in difesa penale di strada e reati contro la persona. Per la sua richiesta le consiglio di cercare uno studio specializzato in quel settore specifico. Posso comunque raccogliere i suoi dati e l'avvocato valuterà personalmente."
-
-Come ti comporti:
-- Rispondi in modo professionale, empatico, rassicurante
-- Massimo 2-3 frasi per risposta
-- SOLO italiano
-- NON dai pareri legali specifici, NON prometti risultati
-- Quando raccogli nome + telefono + descrizione, mostra riepilogo e chiedi conferma
-- Riservatezza assoluta — segreto professionale
-- Prima consulenza: contatto senza impegno, costi discussi dopo valutazione caso
-- Disponibilità: risposta entro 24 ore, urgenze h24
-- Email: niccolo.vecchioni@nclaw.it
-
-Tono: empatico, calmo, protettivo, senza pressione. Non fare mai urgenza artificiale. Ascolta prima di proporre. Se la persona vuole solo informazioni, dalle senza forzare la raccolta dati.`;
+/* ── Proxy server URL ──
+ * The Anthropic API key and the system prompt live ONLY on the server (proxy.js).
+ * Never put credentials in this client-side file.
+ * For deployment: change PROXY_URL to your production endpoint (e.g. '/api/chat'
+ * if the proxy is reverse-proxied on the same origin). */
+const PROXY_URL = 'http://localhost:3001/api/chat';
 
 const WELCOME = 'Buongiorno, sono l\'assistente riservato dell\'Avv. Vecchioni. Come posso aiutarla?';
 const QUICK_REPLIES = [
@@ -238,25 +212,18 @@ function showFallbackForm(){
 
 /* ── Call Anthropic API directly from browser ── */
 async function callAI(conversationHistory){
-  if(!ANTHROPIC_API_KEY) return null;
+  if(!PROXY_URL) return null;
 
   const apiMessages = conversationHistory
     .filter(m => m.role === 'user' || m.role === 'assistant')
     .map(m => ({role: m.role, content: m.content}));
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch(PROXY_URL, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': ANTHROPIC_API_KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true'
-    },
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 300,
-      system: SYSTEM_PROMPT,
-      messages: apiMessages
+      messages: apiMessages,
+      max_tokens: 300
     })
   });
 
