@@ -80,13 +80,17 @@ body{font-family:var(--font-sans);background:var(--black);color:var(--white);-we
 .area-card:hover .area-arrow{transform:translateX(4px)}
 
 /* CHI SONO */
-.chi-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.chi-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--anthracite)}
+.chi-grid{display:flex;flex-direction:column;max-width:760px}
+.chi-name-block{margin:20px 0 32px}
+.chi-name{font-family:var(--font-serif);font-weight:400;font-size:clamp(2.4rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.015em;color:var(--white);margin:0}
+.chi-name-sub{margin-top:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.chi-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--anthracite);max-width:420px;width:100%;margin:0 0 36px}
 .chi-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .chi-img-fallback{width:100%;height:100%;background:linear-gradient(135deg,#1a1507 0%,var(--anthracite) 60%,var(--black) 100%);min-height:400px;display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:var(--gold);letter-spacing:-.04em;opacity:.2}
 .chi-img-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(to top,var(--anthracite),transparent)}
 .chi-gold-line{position:absolute;top:20px;bottom:20px;right:0;width:2px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);opacity:.5}
-.chi-img-caption{font-family:var(--font-serif);font-style:italic;margin-top:16px;font-size:13px;color:var(--grey-d);text-align:center;line-height:1.5;letter-spacing:.005em}
+.chi-thesis{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.4rem,2.6vw,1.75rem);line-height:1.3;letter-spacing:-.005em;color:var(--white);margin:0 0 28px}
+.chi-thesis em{font-style:italic;font-weight:700;color:var(--gold)}
 
 /* METODO */
 .quote-block{position:relative;padding:48px 56px;border-left:3px solid var(--gold);background:var(--gold-dim);margin-bottom:72px}
@@ -212,7 +216,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 @media(prefers-reduced-motion:reduce){.fi{opacity:1!important;transform:none!important;transition:none!important}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.areas-grid{grid-template-columns:repeat(2,1fr)}.chi-grid{grid-template-columns:1fr;gap:48px}.chi-img-wrap{order:-1}}
+@media(max-width:1024px){.hero{grid-template-columns:1fr}.hero-right{display:none}.areas-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:960px){.nav-links{display:none}.hamburger{display:flex}.pillars{grid-template-columns:1fr}.risultati-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr;gap:56px}.footer-grid{grid-template-columns:1fr 1fr}.approach-steps{grid-template-columns:1fr}.faq-layout{grid-template-columns:1fr;gap:32px}.faq-aside{display:none}.faq-trigger{padding:20px 18px}.faq-panel{padding:0 18px 20px}}
 @media(max-width:640px){.cred-inner{flex-direction:column}.cred-item{border-right:none;border-bottom:1px solid var(--border);padding:28px 20px}.cred-item:last-child{border-bottom:none}.areas-grid{grid-template-columns:1fr}.form-card{padding:28px 22px}.footer-grid{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column;align-items:flex-start}.quote-block{padding:32px 28px}.media-nums{flex-direction:column;gap:24px}.media-num-sep{width:40px;height:1px}.chi-badges{flex-direction:column;gap:10px}}
 @media(max-width:420px){.btn{padding:16px 24px;font-size:.82rem}}
@@ -330,29 +334,28 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 <!-- CHI SONO -->
 <section class="sec" id="chi-sono" style="background:var(--anthracite)">
   <div class="wrap chi-grid">
-    <div>
-      <p class="lbl fi">Chi Sono</p>
-      <h2 class="st fi d1">Il sistema si muove prima ancora che tu lo sappia.<br><em>Io quel sistema lo conosco da dentro.</em></h2>
-      <p class="bt fi d2" style="margin-bottom:24px">Sono cresciuto a Milano. Il Parini, ma anche la curva e i graffiti. I miei amici non erano tutti destinati alle carriere pulite. Alcuni ci sono finiti dentro — <strong style="color:#fff;font-weight:700;">e i miei primi clienti sono stati proprio loro. Compagni di scuola, amici d'infanzia.</strong> Conosco quei contesti prima di averli studiati sui codici.</p>
-      <div class="chi-separator fi d2"></div>
-      <p class="bt fi d2">So quello che stai passando. E so come il sistema tratta le persone nella tua situazione — molto prima che arrivi in aula. <strong style="color:#fff;font-weight:700;">Un procedimento penale serio è un mestiere a sé: serve qualcuno che non fa altro, ogni giorno, da diciotto anni.</strong></p>
-      <div class="chi-separator fi d3"></div>
-      <p class="bt fi d3" style="margin-top:0;color:var(--white);font-weight:500"><strong style="color:#fff;font-weight:700;">Non vinco tutti i casi — nessun avvocato onesto lo direbbe. Ma so dove cercare le leve che l'accusa preferisce che tu non conosca.</strong> E conosco i meccanismi di chi sta dall'altra parte della barricata molto prima che arrivino in aula. Se vuoi qualcuno che ti dica la verità prima di dirti quello che vuoi sentire, parliamo.</p>
-      <div class="chi-badges fi d4">
-        <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18+ anni</div>
-        <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Tutti i gradi</div>
-        <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>Cassazione</div>
-      </div>
-      <div class="fi d5" style="margin-top:28px"><a href="#contatti" class="btn" style="padding:15px 36px;font-size:.82rem">Contattami</a></div>
+    <p class="lbl fi">Chi Sono</p>
+    <div class="chi-name-block fi d1">
+      <h2 class="chi-name">Niccolò Vecchioni</h2>
+      <p class="chi-name-sub">Avv. · Foro di Milano</p>
     </div>
-    <div class="fi d2">
-      <div class="chi-img-wrap" style="box-shadow:-4px 0 40px rgba(201,168,76,.08)">
-        <div class="chi-gold-line"></div>
-        <img src="images/chi-sono.png" alt="Avv. Niccolò Vecchioni nel suo studio" class="chi-img" onerror="this.style.display='none'">
-        <div class="chi-img-fallback" style="position:absolute;inset:0;z-index:-1">NV</div>
-      </div>
-      <p class="chi-img-caption">Avv. Niccolò Vecchioni — Foro di Milano</p>
+    <div class="chi-img-wrap fi d2" style="box-shadow:-4px 0 40px rgba(201,168,76,.08)">
+      <div class="chi-gold-line"></div>
+      <img src="images/niccolo-vecchioni.png" alt="Avv. Niccolò Vecchioni" class="chi-img" onerror="this.style.display='none'">
+      <div class="chi-img-fallback" style="position:absolute;inset:0;z-index:-1">NV</div>
     </div>
+    <p class="chi-thesis fi d2">Il sistema si muove prima ancora che tu lo sappia.<br><em>Io quel sistema lo conosco da dentro.</em></p>
+    <p class="bt fi d2" style="margin-bottom:24px">Sono cresciuto a Milano. Il Parini, ma anche la curva e i graffiti. I miei amici non erano tutti destinati alle carriere pulite. Alcuni ci sono finiti dentro — <strong style="color:#fff;font-weight:700;">e i miei primi clienti sono stati proprio loro. Compagni di scuola, amici d'infanzia.</strong> Conosco quei contesti prima di averli studiati sui codici.</p>
+    <div class="chi-separator fi d2"></div>
+    <p class="bt fi d2">So quello che stai passando. E so come il sistema tratta le persone nella tua situazione — molto prima che arrivi in aula. <strong style="color:#fff;font-weight:700;">Un procedimento penale serio è un mestiere a sé: serve qualcuno che non fa altro, ogni giorno, da diciotto anni.</strong></p>
+    <div class="chi-separator fi d3"></div>
+    <p class="bt fi d3" style="margin-top:0;color:var(--white);font-weight:500"><strong style="color:#fff;font-weight:700;">Non vinco tutti i casi — nessun avvocato onesto lo direbbe. Ma so dove cercare le leve che l'accusa preferisce che tu non conosca.</strong> E conosco i meccanismi di chi sta dall'altra parte della barricata molto prima che arrivino in aula. Se vuoi qualcuno che ti dica la verità prima di dirti quello che vuoi sentire, parliamo.</p>
+    <div class="chi-badges fi d4">
+      <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>18+ anni</div>
+      <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Tutti i gradi</div>
+      <div class="chi-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>Cassazione</div>
+    </div>
+    <div class="fi d5" style="margin-top:28px"><a href="#contatti" class="btn" style="padding:15px 36px;font-size:.82rem">Contattami</a></div>
   </div>
 </section>
 
