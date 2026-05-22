@@ -8,7 +8,7 @@
  * if the proxy is reverse-proxied on the same origin). */
 const PROXY_URL = 'http://localhost:3001/api/chat';
 
-const WELCOME = 'Buongiorno, sono l\'assistente riservato dell\'Avv. Vecchioni. Come posso aiutarla?';
+const WELCOME = 'Buongiorno, sono l\'assistente virtuale dello Studio — non l\'avvocato. Posso darle informazioni e aiutarla a fissare un primo contatto. Come posso aiutarla?';
 const QUICK_REPLIES = [
   'Ho bisogno di un avvocato penalista',
   'Vorrei informazioni sulle aree di competenza',
@@ -81,6 +81,8 @@ style.textContent = `
 .nv-ch-send:active{transform:scale(.92)}
 .nv-ch-send:disabled{opacity:.4;cursor:default;transform:none}
 
+.nv-ch-disclaimer{padding:8px 16px 10px;font-family:Inter,sans-serif;font-size:10px;color:#666;text-align:center;border-top:1px solid #2A2A2A;line-height:1.4;letter-spacing:.02em;background:#0F0F0F}
+
 /* Fallback inline form */
 .nv-fb-form{display:flex;flex-direction:column;gap:8px;padding:12px;background:#1A1A1A;border:1px solid #2A2A2A;border-radius:12px;animation:nvMsgIn .3s ease}
 .nv-fb-form input,.nv-fb-form textarea{background:#111;border:1px solid #333;border-radius:8px;padding:9px 12px;color:#fff;font-family:Inter,sans-serif;font-size:12px;outline:none;transition:border-color .2s}
@@ -104,7 +106,7 @@ document.head.appendChild(style);
 /* ── Build HTML ── */
 const fab = document.createElement('button');
 fab.id = 'nv-chat-fab';
-fab.setAttribute('aria-label','Apri chat assistente');
+fab.setAttribute('aria-label','Apri assistente virtuale dello Studio');
 fab.innerHTML = `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><div id="nv-chat-badge">Posso aiutarti?</div>`;
 document.body.appendChild(fab);
 
@@ -112,14 +114,15 @@ const win = document.createElement('div');
 win.id = 'nv-chat-win';
 win.innerHTML = `
 <div class="nv-ch-header">
-  <div class="nv-ch-header-info"><div class="nv-ch-header-dot"></div><div class="nv-ch-header-text"><h4>Avv. Vecchioni</h4><span>Assistente riservato</span></div></div>
+  <div class="nv-ch-header-info"><div class="nv-ch-header-dot"></div><div class="nv-ch-header-text"><h4>Studio Avv. Vecchioni</h4><span>Assistente virtuale</span></div></div>
   <button class="nv-ch-close" aria-label="Chiudi chat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
 </div>
 <div class="nv-ch-body" id="nv-ch-body"></div>
 <div class="nv-ch-input">
   <textarea id="nv-ch-ta" rows="1" placeholder="Scrivi un messaggio..." aria-label="Messaggio"></textarea>
   <button class="nv-ch-send" id="nv-ch-send" aria-label="Invia"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
-</div>`;
+</div>
+<div class="nv-ch-disclaimer">Assistente virtuale · non inserisca dettagli riservati del caso</div>`;
 document.body.appendChild(win);
 
 const body = document.getElementById('nv-ch-body');
@@ -272,13 +275,13 @@ async function sendMessage(text){
       detectContactSend(reply);
     } else {
       // API key vuota — fallback form
-      addMsg('assistant', 'Per garantirle la massima riservatezza, le chiedo di lasciarci i suoi dati. L\'Avv. Vecchioni la ricontatterà personalmente.', false);
+      addMsg('assistant', 'Per parlarne in modo riservato, le chiedo di lasciare i suoi dati: l\'Avv. Vecchioni la ricontatterà personalmente, ed è in quel colloquio che vale il segreto professionale.', false);
       showFallbackForm();
     }
   }catch(e){
     hideTyping();
     console.error('Chat AI error:', e);
-    addMsg('assistant', 'Per garantirle la massima riservatezza, le chiedo di lasciarci i suoi dati. L\'Avv. Vecchioni la ricontatterà personalmente.', false);
+    addMsg('assistant', 'Per parlarne in modo riservato, le chiedo di lasciare i suoi dati: l\'Avv. Vecchioni la ricontatterà personalmente, ed è in quel colloquio che vale il segreto professionale.', false);
     showFallbackForm();
   }
   sendBtn.disabled = false;
