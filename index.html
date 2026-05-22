@@ -85,6 +85,7 @@ body{font-family:var(--font-sans);background:var(--black);color:var(--white);-we
 .chi-img-fallback{width:100%;height:100%;background:linear-gradient(135deg,#1a1507 0%,var(--anthracite) 60%,var(--black) 100%);min-height:400px;display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:800;color:var(--gold);letter-spacing:-.04em;opacity:.2}
 .chi-img-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:30%;background:linear-gradient(to top,var(--anthracite),transparent)}
 .chi-gold-line{position:absolute;top:20px;bottom:20px;right:0;width:2px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);opacity:.5}
+.chi-img-caption{font-family:var(--font-serif);font-style:italic;margin-top:16px;font-size:13px;color:var(--grey-d);text-align:center;line-height:1.5;letter-spacing:.005em}
 
 /* METODO */
 .quote-block{position:relative;padding:48px 56px;border-left:3px solid var(--gold);background:var(--gold-dim);margin-bottom:72px}
@@ -241,8 +242,8 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
   </div>
   <div class="hero-left">
     <div class="hero-badge fi">● PENALISTA — MILANO</div>
-    <h1 class="fi d1">Hai un problema penale serio.<br><em>Parliamone, entro 24 ore.</em></h1>
-    <p class="hero-sub fi d2">Diciotto anni di difesa penale a Milano. Dai reati di strada ai procedimenti più articolati. Difesa a tutti i gradi: Tribunale, Appello, Cassazione.</p>
+    <h1 class="fi d1">Hai un problema penale serio.<br><em>Parliamone.</em></h1>
+    <p class="hero-sub fi d2">Diciotto anni dentro le aule penali di Milano. Il processo si decide nei primi atti — quando la maggior parte delle persone parla troppo, e troppo presto.</p>
     <div class="fi d3">
       <a href="#contatti" class="btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.59 7.91a16 16 0 006.35 6.35l.77-.77a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Richiedi una consulenza riservata</a>
       <p class="microcopy">Contatto coperto dal segreto professionale. Primo riscontro entro 24 ore.</p>
@@ -351,6 +352,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
         <img src="images/chi-sono.png" alt="Avv. Niccolò Vecchioni nel suo studio" class="chi-img" onerror="this.style.display='none'">
         <div class="chi-img-fallback" style="position:absolute;inset:0;z-index:-1">NV</div>
       </div>
+      <p class="chi-img-caption">Avv. Niccolò Vecchioni — Foro di Milano</p>
     </div>
   </div>
 </section>
