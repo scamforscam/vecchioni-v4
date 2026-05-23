@@ -532,7 +532,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 const EJS_PUBLIC_KEY  = '09DDAzcm8wfSR0ANQ';
 const EJS_SERVICE_ID  = 'service_axen7bv';
 const EJS_TEMPLATE_ID = 'template_i41j5j8';
-emailjs.init({ publicKey: EJS_PUBLIC_KEY });
+const EJS_FALLBACK_MSG = 'Invio non riuscito. Scrivici direttamente a niccolo.vecchioni@nclaw.it';
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)},{passive:true});
 const ham=document.getElementById('hamburger'),mob=document.getElementById('mob-menu'),sps=ham.querySelectorAll('span');
@@ -540,6 +540,7 @@ ham.addEventListener('click',()=>{const o=mob.classList.toggle('open');ham.setAt
 document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{mob.classList.remove('open');ham.setAttribute('aria-expanded',false);sps.forEach(s=>{s.style.transform='';s.style.opacity=''})}));
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.02,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.fi').forEach(el=>io.observe(el));
+setTimeout(()=>{document.querySelectorAll('.fi:not(.v)').forEach(el=>el.classList.add('v'))},2500);
 document.querySelectorAll('.hero .fi').forEach((el,i)=>setTimeout(()=>el.classList.add('v'),50+i*110));
 document.querySelectorAll('.cred-num').forEach(el=>{const cio=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('counted');cio.unobserve(e.target)}})},{threshold:.3});cio.observe(el)});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
@@ -548,7 +549,9 @@ const form=document.getElementById('contact-form'),succ=document.getElementById(
 if(form){form.addEventListener('submit',e=>{e.preventDefault();let v=true;['f-name','f-phone'].forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){v=false;el.style.borderColor='rgba(201,168,76,.8)';setTimeout(()=>{el.style.borderColor=''},2500)}});if(!v)return;
 const btn=form.querySelector('.form-submit');btn.disabled=true;btn.textContent='Invio in corso…';
 const params={from_name:document.getElementById('f-name').value.trim(),from_phone:document.getElementById('f-phone').value.trim()};
-emailjs.send(EJS_SERVICE_ID,EJS_TEMPLATE_ID,params).then(()=>{form.style.cssText='transition:opacity .35s ease,transform .35s ease;opacity:0;transform:translateY(8px)';setTimeout(()=>{form.style.display='none';succ.style.display='block';succ.style.opacity='0';succ.style.transition='opacity .4s ease';requestAnimationFrame(()=>{succ.style.opacity='1'})},360)}).catch(err=>{console.error('EmailJS error:',err);btn.disabled=false;btn.textContent='Invia richiesta';alert('Errore nell\'invio. Riprova o scrivici direttamente a niccolo.vecchioni@nclaw.it')})})}
+if(typeof emailjs==='undefined'||!emailjs.send){console.warn('EmailJS not available');btn.disabled=false;btn.textContent='Invia richiesta';alert(EJS_FALLBACK_MSG);return}
+try{emailjs.send(EJS_SERVICE_ID,EJS_TEMPLATE_ID,params).then(()=>{form.style.cssText='transition:opacity .35s ease,transform .35s ease;opacity:0;transform:translateY(8px)';setTimeout(()=>{form.style.display='none';succ.style.display='block';succ.style.opacity='0';succ.style.transition='opacity .4s ease';requestAnimationFrame(()=>{succ.style.opacity='1'})},360)}).catch(err=>{console.error('EmailJS error:',err);btn.disabled=false;btn.textContent='Invia richiesta';alert(EJS_FALLBACK_MSG)})}catch(err){console.error('EmailJS send threw:',err);btn.disabled=false;btn.textContent='Invia richiesta';alert(EJS_FALLBACK_MSG)}})}
+try{if(typeof emailjs!=='undefined')emailjs.init({publicKey:EJS_PUBLIC_KEY})}catch(e){console.warn('EmailJS init failed:',e)}
 </script>
 <script src="chat-widget.js"></script>
 </body>
