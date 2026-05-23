@@ -103,6 +103,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 
 /* CTA FORM */
 .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-start}
+.problem-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:768px){.problem-grid{grid-template-columns:1fr 1.4fr;gap:80px;align-items:center}}
 .cta-urgency{border-left:2px solid var(--gold);padding:14px 20px;background:var(--gold-dim);font-size:1rem;color:var(--white);font-weight:600;line-height:1.5;margin:20px 0 28px}
 .trust-list{display:flex;flex-direction:column;gap:14px}.trust-item{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--grey)}.trust-dot{width:6px;height:6px;background:var(--gold);flex-shrink:0}
 .form-card{background:var(--anthracite);border:1px solid var(--border);padding:44px 40px}
@@ -155,7 +157,7 @@ footer{background:var(--black-deep,#050505);border-top:1px solid var(--gold);pad
 </div>
 
 <section class="sec" style="background:var(--anthracite)">
-  <div class="wrap" style="display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center">
+  <div class="wrap problem-grid">
     <div class="fi"><p class="lbl">Il problema</p><h2 class="st">La situazione<br>in cui ti trovi.</h2><div style="width:48px;height:2px;background:var(--gold);margin-top:24px"></div></div>
     <div class="fi d2">
       <p class="bt" style="margin-bottom:20px">I reati contro la persona arrivano spesso da situazioni che sono sfuggite di mano in pochi secondi. Il processo poi dura anni. Le dichiarazioni rese nella fase delle indagini entrano nel fascicolo e contribuiscono al quadro che il PM utilizza per la sua ricostruzione. In un procedimento penale serio serve pratica esclusivamente penalistica e quotidiana — è un lavoro che si fa a tempo pieno.</p>
