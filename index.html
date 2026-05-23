@@ -147,6 +147,10 @@ footer{background:var(--black-deep);border-top:1px solid var(--gold);padding:56p
 .footer-bottom{max-width:1200px;margin:28px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .footer-legal{font-size:11px;color:var(--grey-d);line-height:1.6}.footer-links{display:flex;gap:20px}
 .footer-links a{font-size:11px;color:var(--grey-d);text-decoration:none;transition:color .2s}.footer-links a:hover{color:var(--grey)}
+.footer-map{margin-top:14px;border:1px solid var(--border);border-radius:6px;overflow:hidden;height:200px;background:var(--anthracite)}
+.footer-map iframe{width:100%;height:100%;border:0;display:block;filter:invert(0.92) hue-rotate(180deg) grayscale(0.4) brightness(0.95) contrast(0.95)}
+.footer-map-link{display:inline-block;margin-top:10px;font-size:11px;color:var(--gold);text-decoration:none;letter-spacing:.04em;transition:color .2s}
+.footer-map-link:hover{color:var(--gold-h);text-decoration:underline}
 
 /* COME FUNZIONA STEPS */
 .approach-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -513,7 +517,9 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline
 <footer>
   <div class="footer-grid">
     <div><div class="nav-mark" style="width:36px;height:36px;font-size:12px">NV</div><div class="footer-brand-name">Avv. Niccolò Vecchioni</div><p class="footer-brand-desc">Penalista a Milano. Difesa in procedimenti penali complessi a tutti i gradi di giudizio. Segreto professionale.</p></div>
-    <div class="footer-col"><p class="footer-col-title">Studio</p><address>Via Cerva, 6<br>20122 Milano<br><br>Foro di Milano</address></div>
+    <div class="footer-col"><p class="footer-col-title">Studio</p><address>Via Cerva, 6<br>20122 Milano<br><br>Foro di Milano</address>
+      <div class="footer-map"><iframe src="https://www.google.com/maps?q=Via+Cerva+6,+20122+Milano,+Italia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Studio Avv. Vecchioni"></iframe></div>
+      <a href="https://www.google.com/maps?q=Via+Cerva+6,+20122+Milano,+Italia" target="_blank" rel="noopener" class="footer-map-link">Apri in Google Maps →</a></div>
     <div class="footer-col"><p class="footer-col-title">Contatti</p><p><a href="mailto:niccolo.vecchioni@nclaw.it">niccolo.vecchioni@nclaw.it</a><br><br><span style="font-size:11px;color:var(--grey-d)">Arresto o fermo: recapito d'emergenza</span></p></div>
     <div class="footer-col"><p class="footer-col-title">Difesa penale</p><p><a href="reati-contro-la-persona.html">Reati contro la persona</a><br><a href="rapine-reati-predatori.html">Rapine e reati predatori</a><br><a href="stupefacenti.html">Stupefacenti</a><br><a href="circolazione-stradale.html">Circolazione stradale</a><br><a href="reati-di-strada.html">Reati di strada e contesti di gruppo</a></p></div>
   </div>
