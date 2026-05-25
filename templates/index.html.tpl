@@ -15,7 +15,7 @@
     <h1><%= lawyer.hero.h1White %><br><em><%= lawyer.hero.h1Gold %></em></h1>
     <p class="hero-sub"><%= lawyer.hero.subtitle %></p>
     <div>
-      <a href="<%= lawyer.hero.ctaTarget %>" class="btn"><%= lawyer.hero.ctaText %></a>
+      <a href="<%= lawyer.hero.ctaTarget %>" class="btn"><%- include('icon.html.tpl', { name: 'message-square', size: 16, stroke: 2.5 }) %><%= lawyer.hero.ctaText %></a>
       <p class="microcopy"><%= lawyer.hero.microcopy %></p>
       <p style="margin-top:20px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--grey-d);text-transform:uppercase"><%= lawyer.hero.caption %></p>
     </div>
@@ -40,14 +40,12 @@
     <p class="lbl"><%= lawyer.areas.label %></p>
     <h2 class="st"><%= lawyer.areas.h2White %><br><em><%= lawyer.areas.h2Gold %></em></h2>
     <div class="areas-grid">
-      <% lawyer.areas.items.filter(a => a.slug !== '_catchall').forEach(a => { %>
+      <% lawyer.areas.items.forEach(a => { %>
         <a href="<%= a.hasDetailPage ? a.slug + '.html' : (a.href || '#contatti') %>" class="area-card">
-          <div class="area-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
-          </div>
+          <div class="area-icon" aria-hidden="true"><%- include('icon.html.tpl', { name: a.icon || 'arrow-right', size: 22, stroke: 1.8 }) %></div>
           <div class="area-title"><%= a.title %></div>
           <div class="area-desc"><%= a.cardDesc %></div>
-          <div class="area-arrow"><span><%= a.ctaText %></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <div class="area-arrow"><span><%= a.ctaText %></span><%- include('icon.html.tpl', { name: 'arrow-right', size: 14, stroke: 2 }) %></div>
         </a>
       <% }); %>
     </div>
@@ -74,7 +72,7 @@
     <p class="bt" style="color:var(--white);font-weight:500"><%= lawyer.lawyer.bio.closing %></p>
     <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap">
       <% lawyer.lawyer.badges.forEach(b => { %>
-        <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 14px;font-size:12px;color:var(--gold);font-weight:600"><%= b.label %></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 14px;font-size:12px;color:var(--gold);font-weight:600"><% if (b.icon) { %><%- include('icon.html.tpl', { name: b.icon, size: 14, stroke: 2 }) %><% } %><%= b.label %></div>
       <% }); %>
     </div>
     <div style="margin-top:28px"><a href="#contatti" class="btn" style="padding:15px 36px;font-size:.82rem">Contattami</a></div>
@@ -91,7 +89,8 @@
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)">
       <% lawyer.method.pillars.forEach(p => { %>
         <div style="background:var(--anthracite);padding:44px 36px">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:20px"><%= p.num %></div>
+          <% if (p.icon) { %><div style="color:var(--gold);margin-bottom:16px"><%- include('icon.html.tpl', { name: p.icon, size: 28, stroke: 1.6 }) %></div><% } %>
+          <div style="font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--gold);margin-bottom:14px"><%= p.num %></div>
           <div style="font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:12px"><%= p.title %></div>
           <p style="font-size:14px;color:var(--grey);line-height:1.65"><%= p.text %></p>
         </div>

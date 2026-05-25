@@ -1,0 +1,229 @@
+{
+  "_comment": "Demo per Avv. Mario Rossi (fittizio). Generato 2026-05-25 — usato come benchmark visivo per validare il sistema demo.",
+
+  "slug": "rossi",
+
+  "studio": {
+    "name": "Studio Avv. Mario Rossi",
+    "shortName": "Avv. Rossi",
+    "tagline": "Penalista — Torino",
+    "logoMark": "MR",
+    "domain": null
+  },
+
+  "lawyer": {
+    "fullName": "Mario Rossi",
+    "title": "Avv.",
+    "role": "Penalista — Foro di Torino",
+    "yearsExperience": 15,
+    "yearsExperienceLabel": "quindici anni",
+    "photoMain": null,
+    "photoHero": "images/demo-hero-placeholder.png",
+    "photoAvatar": null,
+    "bio": {
+      "thesisWhite": "Difendere significa scegliere quando agire.",
+      "thesisGold": "Lo si fa adesso, non in aula.",
+      "paragraphs": [
+        { "text": "Mi occupo di diritto penale al Foro di Torino. La mia pratica si concentra su due aree: gli stupefacenti e i reati contro il patrimonio. ", "bold": "Materie diverse che hanno un denominatore comune: la qualificazione del fatto si gioca nella fase delle indagini." },
+        { "text": "Nella mia esperienza, le scelte più decisive — riqualificare un'accusa di spaccio in uso personale, ricondurre una contestazione di truffa a un fatto colposo, separare la posizione di un coimputato — ", "bold": "si fanno sul fascicolo, prima dell'udienza preliminare." },
+        { "text": "Il lavoro che propongo è chirurgico sul materiale probatorio: perizie tossicologiche, ricostruzione documentale, analisi delle intercettazioni. Niente promesse, ", "bold": "solo i margini reali che la procedura penale offre alla difesa." }
+      ],
+      "closing": "Se vuoi capire dove si gioca davvero la tua difesa, parliamone in un confronto diretto."
+    },
+    "badges": [
+      { "icon": "clock",  "label": "15+ anni" },
+      { "icon": "shield", "label": "Tribunale e Appello" }
+    ]
+  },
+
+  "credentials": {
+    "court": "Foro di Torino",
+    "order": "Ordine degli Avvocati di Torino",
+    "cassazioneIscritto": false,
+    "credBar": [
+      { "num": "15+",            "label": "Anni di pratica penalistica" },
+      { "num": "Torino",         "label": "Foro di iscrizione" },
+      { "num": "Riservatezza",   "label": "Coperta dal segreto professionale" }
+    ]
+  },
+
+  "contacts": {
+    "email": "mario.rossi@studiorossi-torino.it",
+    "phone": null,
+    "whatsapp": null,
+    "address": {
+      "street": "Via Po, 25",
+      "zip": "10124",
+      "city": "Torino",
+      "country": "Italia",
+      "mapsQuery": "Via Po 25, 10124 Torino, Italia"
+    },
+    "emergencyLine": null
+  },
+
+  "brand": {
+    "palette": {
+      "black":      "#0E1015",
+      "blackDeep":  "#070809",
+      "anthracite": "#1A1D24",
+      "border":     "#2E3038",
+      "hairline":   "#252830",
+      "gold":       "#8B3A3A",
+      "goldHover":  "#A04848",
+      "white":      "#FFFFFF",
+      "cream":      "#E8E2D5",
+      "grey":       "#A0A0A8",
+      "greyDim":    "#7A7A82"
+    },
+    "fonts": {
+      "serif":      "Source Serif 4",
+      "serifQuery": "Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700",
+      "sans":       "Inter",
+      "sansQuery":  "Inter:wght@300;400;600;700;800"
+    }
+  },
+
+  "nav": {
+    "ctaLabel": "Consulenza riservata",
+    "items": [
+      { "href": "#aree",      "label": "Aree" },
+      { "href": "#chi-sono",  "label": "Chi Sono" },
+      { "href": "#risultati", "label": "Approccio" }
+    ]
+  },
+
+  "hero": {
+    "eyebrow": "PENALISTA — TORINO",
+    "h1White": "Un procedimento penale è una corsa contro il tempo.",
+    "h1Gold":  "La difesa parte adesso.",
+    "subtitle": "Pratica penalistica esclusiva al Foro di Torino, focalizzata su stupefacenti e reati contro il patrimonio. Quando la qualificazione del fatto si decide nelle indagini, la differenza la fa un'analisi tecnica precoce — non l'udienza.",
+    "ctaText": "Richiedi un confronto",
+    "ctaTarget": "#contatti",
+    "microcopy": "Contatto coperto dal segreto professionale. Riscontro entro 24 ore.",
+    "caption": "Quindici anni di pratica penalistica a Torino"
+  },
+
+  "areas": {
+    "label": "Aree di pratica",
+    "h2White": "Due materie, un approccio.",
+    "h2Gold":  "Il fascicolo prima dell'aula.",
+    "items": [
+      {
+        "slug": "stupefacenti",
+        "title": "Stupefacenti",
+        "subtitle": "Detenzione, spaccio, lieve entità",
+        "cardDesc": "La differenza tra uso personale e cessione si decide su perizie, contesto e modalità di confezionamento — elementi che si lavorano nelle indagini.",
+        "icon": "pill",
+        "hasDetailPage": false,
+        "ctaText": "Parlane con me",
+        "href": "#contatti"
+      },
+      {
+        "slug": "reati-patrimoniali",
+        "title": "Reati contro il patrimonio",
+        "subtitle": "Truffa, appropriazione, ricettazione",
+        "cardDesc": "Truffe, appropriazione indebita, ricettazione, riciclaggio. Procedimenti in cui la ricostruzione documentale e l'elemento soggettivo decidono l'esito.",
+        "icon": "package",
+        "hasDetailPage": false,
+        "ctaText": "Parlane con me",
+        "href": "#contatti"
+      },
+      {
+        "slug": "_catchall",
+        "title": "Altro caso penale?",
+        "subtitle": null,
+        "cardDesc": "Se la tua situazione non rientra in queste due aree, valutiamo insieme se posso comunque aiutarti o indirizzarti.",
+        "icon": "message-square",
+        "hasDetailPage": false,
+        "ctaText": "Parlane con me",
+        "href": "#contatti"
+      }
+    ]
+  },
+
+  "chiSono": { "label": "Chi Sono" },
+
+  "method": {
+    "label": "Il Metodo",
+    "quote": "Una difesa che arriva in aula è quasi sempre in ritardo: il fascicolo si forma prima.",
+    "pillars": [
+      { "num": "01", "icon": "lock",         "title": "Riservatezza", "text": "Il contenuto del nostro colloquio è coperto dal segreto professionale ex art. 622 c.p. Tutto ciò che mi racconti resta tra noi, senza eccezioni." },
+      { "num": "02", "icon": "eye",          "title": "Onestà",       "text": "Ti dico cosa la procedura penale permette davvero di fare nella tua situazione. Niente promesse di risultato, solo i margini reali su cui lavorare." },
+      { "num": "03", "icon": "shield-check", "title": "Tecnica",      "text": "Il lavoro sul fascicolo — perizie, intercettazioni, ricostruzione documentale — è il terreno in cui si decidono i procedimenti penali seri." }
+    ]
+  },
+
+  "discrezione": {
+    "label": "Approccio",
+    "h2White": "Non troverai nomi di clienti su questo sito.",
+    "h2Gold":  "C'è una ragione.",
+    "paragraphs": [
+      "Lo studio non pubblica casi, sentenze incorniciate o testimonianze nominative. Non perché i risultati non contino — contano. Ma la stessa riservatezza che proteggerà te è quella che mi vieta di esporre chi mi ha dato fiducia prima.",
+      "Di alcuni procedimenti la cronaca ha già scritto, e di quelli posso parlare in un colloquio diretto. Del tuo caso non saprà mai nessuno, fuori da quella stanza.",
+      "Quello che posso fare per te lo capiamo parlando — in privato, di persona o al telefono."
+    ],
+    "cta": "Parliamone in privato"
+  },
+
+  "faq": {
+    "label": "Domande frequenti",
+    "h2White": "Quello che mi chiedi più spesso.",
+    "items": [
+      { "q": "Quanto costa una consulenza?",                "a": "Il primo contatto telefonico è gratuito e serve a inquadrare la situazione. Gli onorari per l'eventuale incarico sono concordati per iscritto, sulla base dei parametri forensi e della complessità del caso." },
+      { "q": "Quando dovrei contattare un avvocato?",       "a": "Il prima possibile. Nel diritto penale il tempo gioca contro l'indagato: ogni atto che si forma senza una difesa attiva contribuisce a fissare una versione che poi sarà difficile ridiscutere in udienza." },
+      { "q": "Posso cambiare avvocato in corso d'opera?",   "a": "Sì, è un diritto del cliente esercitabile in qualsiasi fase del procedimento. La revoca del mandato precedente e la nomina del nuovo difensore si formalizzano con atti semplici." },
+      { "q": "La chat sul sito è coperta dal segreto?",     "a": "No: le conversazioni scritte online passano per server terzi e non sono coperte dal segreto professionale. Il segreto copre il colloquio diretto con l'avvocato. Per questo qui sul sito raccolgo solo nome e telefono — il caso si racconta a voce." }
+    ]
+  },
+
+  "contattiSection": {
+    "label": "Contatti",
+    "h2White": "Raccontami cosa è successo,",
+    "h2Gold":  "ti rispondo personalmente.",
+    "urgencyDefault": "Mi lasci nome e numero, ti richiamo io entro 24 ore. Niente dettagli del caso per iscritto — quelli si raccontano al telefono o in studio, dove vale il segreto professionale.",
+    "trustList": [
+      "Coperto dal segreto professionale",
+      "Risposta personale entro 24 ore"
+    ]
+  },
+
+  "form": {
+    "title": "Richiedi un confronto",
+    "intro": "Mi lasci nome e numero, ti richiamo io. I dettagli del caso me li racconti a voce, non li scrivere qui.",
+    "fields": [
+      { "id": "f-name",  "type": "text", "label": "Nome",     "placeholder": "Come ti chiami",                "required": true },
+      { "id": "f-phone", "type": "tel",  "label": "Telefono", "placeholder": "Un numero dove posso chiamarti", "required": true }
+    ],
+    "ctaText": "Invia richiesta",
+    "successTitle": "Richiesta ricevuta.",
+    "successBody": "Ti contatterò personalmente entro 24 ore.",
+    "responseTimeBadge": "Risposta personale entro 24 ore",
+    "gdpr": "Inviando acconsenti al trattamento secondo l'<a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:underline\">informativa privacy</a>.",
+    "provider": "none",
+    "fallbackMessage": "Modulo non attivo in questa anteprima. Per contattare lo studio: mario.rossi@studiorossi-torino.it"
+  },
+
+  "chat": { "enabled": false, "scriptSrc": null },
+
+  "footer": {
+    "brandDesc": "Pratica penalistica al Foro di Torino. Difesa in procedimenti per stupefacenti e reati contro il patrimonio.",
+    "year": 2026,
+    "legalLine": "Iscritto all'Ordine degli Avvocati di Torino"
+  },
+
+  "legal": {
+    "privacy":    { "title": "Privacy Policy",  "draft": true },
+    "cookie":     { "title": "Cookie Policy",   "draft": true },
+    "noteLegali": { "title": "Note Legali",     "draft": true }
+  },
+
+  "demoMeta": {
+    "isDemo": true,
+    "agencyName": "La Mia Agenzia",
+    "agencyUrl": null,
+    "ctaPersonalUrl": "https://wa.me/393331234567",
+    "ctaPersonalLabel": "Parliamone",
+    "createdAt": "2026-05-25",
+    "createdFromUrl": null
+  }
+}

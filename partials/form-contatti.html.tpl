@@ -8,7 +8,7 @@
         <input type="<%= f.type %>" id="<%= f.id %>" placeholder="<%= f.placeholder %>" <% if (f.required) { %>required<% } %>>
       </div>
     <% }); %>
-    <button type="submit" class="btn form-submit" style="text-transform:none;letter-spacing:.01em"><%= lawyer.form.ctaText %></button>
+    <button type="submit" class="btn form-submit" style="text-transform:none;letter-spacing:.01em"><%- include('icon.html.tpl', { name: 'send', size: 15, stroke: 2.5 }) %><%= lawyer.form.ctaText %></button>
   </form>
   <div class="form-success" id="form-success" style="display:none;text-align:center;padding:32px 20px">
     <h3 style="font-size:20px;font-weight:700;color:var(--white);margin-bottom:10px"><%= lawyer.form.successTitle %></h3>
