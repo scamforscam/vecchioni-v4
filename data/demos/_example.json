@@ -1,0 +1,199 @@
+{
+  "_comment": "Template di partenza per nuova demo. Copia questo file in data/demos/{cognome}.json, personalizza ogni campo e lancia `npm run build`. Vedi CLAUDE.md per il manuale completo.",
+
+  "slug": "esempio",
+
+  "studio": {
+    "name": "Studio Avv. Mario Rossi",
+    "shortName": "Avv. Rossi",
+    "tagline": "Penalista — Torino",
+    "logoMark": "MR",
+    "domain": null
+  },
+
+  "lawyer": {
+    "fullName": "Mario Rossi",
+    "title": "Avv.",
+    "role": "Penalista — Foro di Torino",
+    "yearsExperience": 15,
+    "yearsExperienceLabel": "quindici anni",
+    "photoMain": null,
+    "photoHero": null,
+    "photoAvatar": null,
+    "bio": {
+      "thesisWhite": "Difendo persone, non casi.",
+      "thesisGold": "La differenza la fa il tempo.",
+      "paragraphs": [
+        { "text": "Quindici anni di pratica penalistica esclusiva al Foro di Torino. ", "bold": "Mi occupo solo di penale, ogni giorno." },
+        { "text": "Lavoro sui dettagli del fascicolo nella fase delle indagini, quando le scelte pesano davvero. ", "bold": "Una difesa che arriva in aula è quasi sempre in ritardo." }
+      ],
+      "closing": "Se vuoi un confronto onesto sulla tua situazione, parliamone."
+    },
+    "badges": [
+      { "icon": "clock", "label": "15+ anni" },
+      { "icon": "shield", "label": "Tutti i gradi" }
+    ]
+  },
+
+  "credentials": {
+    "court": "Foro di Torino",
+    "order": "Ordine degli Avvocati di Torino",
+    "cassazioneIscritto": false,
+    "credBar": [
+      { "num": "15+",          "label": "Anni di difesa penale" },
+      { "num": "Indagini",     "label": "La difesa parte qui" },
+      { "num": "Riservatezza", "label": "Coperta dal segreto professionale" }
+    ]
+  },
+
+  "contacts": {
+    "email": "info@studiorossi.it",
+    "phone": null,
+    "whatsapp": null,
+    "address": {
+      "street": "Via Roma, 1",
+      "zip": "10121",
+      "city": "Torino",
+      "country": "Italia",
+      "mapsQuery": "Via Roma 1, 10121 Torino, Italia"
+    },
+    "emergencyLine": null
+  },
+
+  "brand": {
+    "palette": {
+      "black":      "#0A0A0A",
+      "blackDeep":  "#050505",
+      "anthracite": "#1C1C1C",
+      "border":     "#333333",
+      "hairline":   "#2A2A2A",
+      "gold":       "#9B7A4A",
+      "goldHover":  "#B89058",
+      "white":      "#FFFFFF",
+      "cream":      "#E8E5DE",
+      "grey":       "#A0A0A0",
+      "greyDim":    "#8A8175"
+    },
+    "fonts": {
+      "serif":      "Source Serif 4",
+      "serifQuery": "Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700",
+      "sans":       "Inter",
+      "sansQuery":  "Inter:wght@300;400;600;700;800"
+    }
+  },
+
+  "nav": {
+    "ctaLabel": "Consulenza riservata",
+    "items": [
+      { "href": "#aree",      "label": "Aree" },
+      { "href": "#chi-sono",  "label": "Chi Sono" }
+    ]
+  },
+
+  "hero": {
+    "eyebrow": "PENALISTA — TORINO",
+    "h1White": "Hai un problema penale?",
+    "h1Gold":  "Parliamone.",
+    "subtitle": "Pratica penalistica esclusiva da quindici anni. Lavoro sul fascicolo, non in aula: le scelte difensive che contano si fanno nelle indagini.",
+    "ctaText": "Richiedi una consulenza",
+    "ctaTarget": "#contatti",
+    "microcopy": "Contatto coperto dal segreto professionale. Primo riscontro entro 24 ore.",
+    "caption": "Quindici anni di difesa penale a Torino"
+  },
+
+  "areas": {
+    "label": "Aree di competenza",
+    "h2White": "Le aree di pratica.",
+    "h2Gold":  "Penalistica esclusiva.",
+    "items": [
+      { "slug": "reati-contro-persona", "title": "Reati contro la persona", "subtitle": "Lesioni, minacce, stalking", "cardDesc": "Lesioni, minacce, atti persecutori. La difesa lavora sulla qualificazione del fatto e sull'elemento soggettivo.", "icon": "user", "hasDetailPage": false, "ctaText": "Parlane con me", "href": "#contatti" },
+      { "slug": "reati-patrimonio",     "title": "Reati contro il patrimonio", "subtitle": "Truffa, appropriazione", "cardDesc": "Truffa, appropriazione indebita, ricettazione. Procedimenti in cui la ricostruzione documentale è decisiva.", "icon": "package", "hasDetailPage": false, "ctaText": "Parlane con me", "href": "#contatti" },
+      { "slug": "stupefacenti",         "title": "Stupefacenti", "subtitle": "Detenzione, spaccio", "cardDesc": "La differenza tra uso personale e spaccio si decide nelle indagini, non in aula.", "icon": "pill", "hasDetailPage": false, "ctaText": "Parlane con me", "href": "#contatti" }
+    ]
+  },
+
+  "chiSono": { "label": "Chi Sono" },
+
+  "method": {
+    "label": "Il Metodo",
+    "quote": "La difesa non si improvvisa in udienza: si costruisce nel fascicolo, atto per atto.",
+    "pillars": [
+      { "num": "01", "icon": "lock",         "title": "Riservatezza", "text": "Quello che mi racconti è coperto dal segreto professionale." },
+      { "num": "02", "icon": "eye",          "title": "Onestà",       "text": "Ti dico cosa si può fare davvero, non quello che vuoi sentire." },
+      { "num": "03", "icon": "shield-check", "title": "Tecnica",      "text": "Il lavoro sul fascicolo è il vero terreno della difesa." }
+    ]
+  },
+
+  "discrezione": {
+    "label": "Riservatezza",
+    "h2White": "Niente vetrina.",
+    "h2Gold":  "Solo lavoro.",
+    "paragraphs": [
+      "Su questo sito non troverai elenchi di casi o nomi di clienti.",
+      "La riservatezza che proteggerà te è la stessa che mi vieta di mettere in vetrina chi mi ha dato fiducia.",
+      "Quello che posso fare per te lo capiamo parlando."
+    ],
+    "cta": "Parliamone in privato"
+  },
+
+  "faq": {
+    "label": "Domande",
+    "h2White": "Quello che ti stai chiedendo.",
+    "items": [
+      { "q": "Quanto costa una consulenza?", "a": "Il primo contatto serve a capire la situazione. Onorari per iscritto, secondo parametri forensi." },
+      { "q": "Quanto è urgente?",            "a": "Nei procedimenti penali il tempo gioca per l'accusa: prima si interviene, più spazio ha la difesa." },
+      { "q": "Posso cambiare avvocato?",     "a": "Sì, in qualsiasi momento. È un tuo diritto." }
+    ]
+  },
+
+  "contattiSection": {
+    "label": "Contatti",
+    "h2White": "Raccontami cosa è successo,",
+    "h2Gold":  "ti rispondo io.",
+    "urgencyDefault": "Mi lasci nome e numero, ti richiamo entro 24 ore. Niente dettagli del caso per iscritto — quelli si raccontano al telefono.",
+    "trustList": [
+      "Coperto dal segreto professionale",
+      "Risposta personale entro 24 ore"
+    ]
+  },
+
+  "form": {
+    "title": "Richiedi una consulenza",
+    "intro": "Mi lasci nome e numero, ti richiamo io.",
+    "fields": [
+      { "id": "f-name",  "type": "text", "label": "Nome",     "placeholder": "Come ti chiami",                "required": true },
+      { "id": "f-phone", "type": "tel",  "label": "Telefono", "placeholder": "Un numero dove posso chiamarti", "required": true }
+    ],
+    "ctaText": "Invia richiesta",
+    "successTitle": "Richiesta ricevuta.",
+    "successBody": "Ti contatterò personalmente entro 24 ore.",
+    "responseTimeBadge": "Risposta personale entro 24 ore",
+    "gdpr": "Inviando acconsenti al trattamento secondo l'<a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:underline\">informativa privacy</a>.",
+    "provider": "none",
+    "fallbackMessage": "Invio non disponibile in questa anteprima. Scrivici a info@studiorossi.it"
+  },
+
+  "chat": { "enabled": false, "scriptSrc": null },
+
+  "footer": {
+    "brandDesc": "Studio penalista a Torino. Difesa in procedimenti complessi.",
+    "year": 2026,
+    "legalLine": "Iscritto all'Ordine degli Avvocati di Torino"
+  },
+
+  "legal": {
+    "privacy":    { "title": "Privacy Policy",  "draft": true },
+    "cookie":     { "title": "Cookie Policy",   "draft": true },
+    "noteLegali": { "title": "Note Legali",     "draft": true }
+  },
+
+  "demoMeta": {
+    "isDemo": true,
+    "agencyName": "Studio Demo (la mia agenzia)",
+    "agencyUrl": "https://example.com",
+    "ctaPersonalUrl": "https://wa.me/393331234567",
+    "ctaPersonalLabel": "Parliamone",
+    "createdAt": "2026-05-25",
+    "createdFromUrl": null
+  }
+}

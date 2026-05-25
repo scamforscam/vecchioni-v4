@@ -33,3 +33,6 @@ build/
 
 # Local Puppeteer artifacts (uncomment if you don't want screenshots in the repo)
 # screenshot-*.png
+
+# Build output (generato da scripts/build.js)
+dist/

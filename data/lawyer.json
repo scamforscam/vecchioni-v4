@@ -1,0 +1,514 @@
+{
+  "_schema": "1.0",
+  "_comment": "Dati COMPLETI dello studio. Cambiando questo file cambia tutto il sito. Schema documentato in CLAUDE.md. Per generare una nuova demo per un altro avvocato, copia questo file in data/demos/{cognome}.json e personalizza tutti i campi.",
+
+  "slug": "vecchioni",
+
+  "studio": {
+    "name": "Studio Avv. Niccolò Vecchioni",
+    "shortName": "Avv. Vecchioni",
+    "tagline": "Penalista — Milano",
+    "logoMark": "NV",
+    "domain": "https://www.vecchioni-penalista.it"
+  },
+
+  "lawyer": {
+    "fullName": "Niccolò Vecchioni",
+    "title": "Avv.",
+    "role": "Penalista — Foro di Milano",
+    "yearsExperience": 18,
+    "yearsExperienceLabel": "diciotto anni",
+    "photoMain": "images/niccolo-vecchioni.png",
+    "photoHero": "images/hero-portrait.png",
+    "photoAvatar": "images/vecchioni-reale.jpg",
+    "bio": {
+      "thesisWhite": "Mi hanno chiamato \"l'avvocato dei trapper\".",
+      "thesisGold": "Io difendo persone, non un genere musicale.",
+      "paragraphs": [
+        {
+          "text": "È vero, però: certi mondi li conosco dall'interno. Sono cresciuto a Milano tra i graffiti, il rap e la strada — e non è un dettaglio biografico. È il motivo per cui chi ci finisce dentro si fida di me: so leggere certi contesti, riconoscere certe dinamiche, parlare con chi ho davanti senza fingere di capirlo. ",
+          "bold": "Nel penale la fiducia è metà del lavoro."
+        },
+        {
+          "text": "L'altra metà è tecnica. Il codice penale stabilisce cosa puoi e non puoi fare; il codice di procedura penale, se lo sai usare, ",
+          "bold": "è quello che ti tira fuori dai guai.",
+          "tail": " È lì che si gioca la difesa, ed è lì che lavoro."
+        },
+        {
+          "text": "Negli anni ho seguito procedimenti finiti sulle prime pagine e casi di cui non saprai mai nulla: reati contro la persona, stupefacenti, rapine, contesti di gruppo, guida in stato di ebbrezza. ",
+          "bold": "Faccio questo, e solo questo, da diciotto anni.",
+          "tail": " Un procedimento penale serio è un mestiere a sé. A unirli non è il reato: è una persona che, in quel momento, ha bisogno di qualcuno che stia dalla sua parte e sappia cosa fare."
+        }
+      ],
+      "closing": "Non vinco tutti i casi — nessun avvocato onesto lo direbbe. Ma so dove cercare le leve che l'accusa preferisce tu non conosca. Se cerchi qualcuno che ti dica la verità invece di quello che vuoi sentire, parliamo."
+    },
+    "badges": [
+      { "icon": "clock", "label": "18+ anni" },
+      { "icon": "shield", "label": "Tutti i gradi" },
+      { "icon": "landmark", "label": "Cassazione" }
+    ]
+  },
+
+  "credentials": {
+    "court": "Foro di Milano",
+    "order": "Ordine degli Avvocati di Milano",
+    "cassazioneIscritto": true,
+    "credBar": [
+      { "num": "18+",         "label": "Anni di difesa penale" },
+      { "num": "Cassazione",  "label": "Iscritto al patrocinio in Cassazione" },
+      { "num": "Riservatezza","label": "Coperta dal segreto professionale" }
+    ]
+  },
+
+  "contacts": {
+    "email": "niccolo.vecchioni@nclaw.it",
+    "phone": null,
+    "whatsapp": null,
+    "address": {
+      "street": "Via Cerva, 6",
+      "zip": "20122",
+      "city": "Milano",
+      "country": "Italia",
+      "mapsQuery": "Via Cerva 6, 20122 Milano, Italia"
+    },
+    "emergencyLine": "Arresto o fermo: recapito d'emergenza"
+  },
+
+  "brand": {
+    "palette": {
+      "black":      "#0A0A0A",
+      "blackDeep":  "#050505",
+      "anthracite": "#1C1C1C",
+      "border":     "#333333",
+      "hairline":   "#2A2A2A",
+      "gold":       "#C9A84C",
+      "goldHover":  "#D4AF37",
+      "white":      "#FFFFFF",
+      "cream":      "#E8E5DE",
+      "grey":       "#A0A0A0",
+      "greyDim":    "#8A8175"
+    },
+    "fonts": {
+      "serif":      "Source Serif 4",
+      "serifQuery": "Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700",
+      "sans":       "Inter",
+      "sansQuery":  "Inter:wght@300;400;600;700;800"
+    }
+  },
+
+  "nav": {
+    "ctaLabel": "Consulenza riservata",
+    "items": [
+      { "href": "#aree",      "label": "Aree" },
+      { "href": "#risultati", "label": "Discrezione" },
+      { "href": "#chi-sono",  "label": "Chi Sono" }
+    ]
+  },
+
+  "hero": {
+    "eyebrow": "PENALISTA — MILANO",
+    "h1White": "Hai un problema penale serio?",
+    "h1Gold":  "Parliamone.",
+    "subtitle": "Non ti prometto miracoli — sarebbe disonesto. Ti dico, in concreto, cosa si può fare. Che sia appena successo o vada avanti da tempo, ogni giorno che aspetti pesa.",
+    "ctaText": "Richiedi una consulenza riservata",
+    "ctaTarget": "#contatti",
+    "microcopy": "Contatto coperto dal segreto professionale. Primo riscontro entro 24 ore.",
+    "caption": "Oltre 18 anni di difesa penale a Milano — Tribunale, Appello, Cassazione"
+  },
+
+  "areas": {
+    "label": "Aree di competenza",
+    "h2White": "Quello che ti è capitato ha un nome preciso.",
+    "h2Gold":  "E una difesa specifica.",
+    "items": [
+      {
+        "slug": "reati-contro-la-persona",
+        "title": "Reati contro la persona",
+        "subtitle": "Lesioni, omicidio, minacce",
+        "cardDesc": "Quando ti accusano di aver fatto del male a qualcuno, la verità non basta. Serve chi la faccia valere.",
+        "icon": "user",
+        "hasDetailPage": true,
+        "ctaText": "Approfondisci",
+        "hero": {
+          "image": "images/hero-reati-persona.png",
+          "badge": "REATI CONTRO LA PERSONA — DIFESA PENALE",
+          "h1Line1": "Ti hanno accusato di aver fatto del male a qualcuno.",
+          "h1Line2": "La difesa si costruisce dalla ricostruzione del fatto.",
+          "subtitle": "Un'accusa per lesioni, tentato omicidio o omicidio richiede una difesa attiva dalla fase delle indagini. La ricostruzione dei fatti, l'analisi delle testimonianze e degli accertamenti tecnici sono il lavoro che il fascicolo richiede prima dell'udienza."
+        },
+        "problemText": "Nei reati contro la persona la dinamica si gioca su versioni in conflitto: chi ha aggredito chi, in quale ordine, con quale dolo o colpa. Il primo verbale, le testimonianze raccolte a caldo, gli accertamenti medico-legali costruiscono una versione che tende a fissarsi nel fascicolo. La difesa lavora elemento per elemento per costruire la lettura alternativa, prima che diventi tardi.",
+        "approach": {
+          "h2White": "Come costruisco",
+          "h2Gold":  "la tua difesa.",
+          "intro": "Nei reati contro la persona la difesa si gioca su dinamiche, testimonianze e responsabilità. Il mio lavoro è smontare la versione dell'accusa — prima che diventi l'unica versione che il giudice conosce.",
+          "cards": [
+            { "label": "Versione dei fatti",  "title": "Ricostruzione della dinamica",     "desc": "Chi ha colpito, come, in che ordine. Il primo verbale è una versione tra le possibili — la difesa lavora sulla coerenza interna, sulle testimonianze, sulla scena." },
+            { "label": "Elemento soggettivo", "title": "Dolo, colpa, eccesso",              "desc": "Lesioni volontarie, colpose, eccesso colposo di legittima difesa. La qualificazione soggettiva cambia tutto — e si stabilisce dagli elementi concreti." },
+            { "label": "Aggravanti",          "title": "Lesioni gravi e gravissime",       "desc": "La gravità della lesione (durata della malattia, perdita o indebolimento di organi) trasforma cornici di pena moderate in pene severe. Si contesta con consulenza medico-legale." }
+          ]
+        },
+        "method": {
+          "label": "Come si imposta la difesa",
+          "h2White": "Dal fatto",
+          "h2Gold":  "alla ricostruzione.",
+          "subtitle": "Nei reati contro la persona la difesa si gioca sulla ricostruzione dinamica e sulla qualificazione giuridica. Si fa nella fase delle indagini — non in udienza.",
+          "steps": [
+            { "num": "01", "title": "Ricostruire la dinamica",         "desc": "Analisi delle testimonianze, dei referti, della scena. Il primo verbale è quasi sempre semplificato." },
+            { "num": "02", "title": "Valutare l'elemento soggettivo",  "desc": "Dolo specifico, dolo eventuale, colpa, eccesso colposo: ognuno cambia la cornice di pena." },
+            { "num": "03", "title": "Contestare la qualificazione",    "desc": "Lesioni gravi vs lievi, tentato omicidio vs lesioni con dolo eventuale: la qualificazione iniziale del PM non è quella finale." }
+          ]
+        },
+        "faq": {
+          "label": "Obiezioni",
+          "h2White": "Quello che stai pensando.",
+          "h2Gold":  "Le risposte.",
+          "items": [
+            { "q": "Ci sono testimoni contro di me.",                 "a": "I testimoni ricostruiscono ciò che ricordano, non necessariamente ciò che è successo. *L'attendibilità si analizza con tecnica:* contesto emotivo, posizione al momento dei fatti, precedenti dichiarazioni, coerenza interna. L'esame testimoniale è uno dei terreni tecnici dove la difesa può incidere sul quadro probatorio." },
+            { "q": "Il referto medico è pesante.",                   "a": "Il referto descrive le conseguenze, non le responsabilità. *Sono due cose completamente diverse.* Le lesioni documentate parlano di ciò che è successo al corpo della persona offesa, non di chi ne è responsabile, con quale intensità di dolo, e in quale contesto. La consulenza medico-legale della difesa lavora esattamente su questo spazio." },
+            { "q": "Sono già in carcere.",                            "a": "L'udienza di convalida è il primo campo di battaglia. *Se sei in custodia, c'è una finestra temporale stretta ma concreta.* Il Tribunale del Riesame è il secondo. La difesa deve essere attiva dall'istante in cui scatta la misura: la detenzione preventiva non contestata costruisce un quadro a sfavore con il passare delle settimane." },
+            { "q": "Mi sono solo difeso. Perché mi accusano?",        "a": "La legittima difesa ha confini precisi nel codice. *Non basta dire \"mi sono difeso\"* — va dimostrato che la reazione era proporzionata e che non c'erano alternative. In una rissa, la Cassazione riconosce la legittima difesa solo quando chi si difende assume una posizione passiva. La valutazione va fatta sul caso specifico." },
+            { "q": "La vittima ha ritirato la querela. Perché il processo va avanti?", "a": "Dipende dal tipo di reato. Le lesioni gravi, gravissime e il tentato omicidio *sono procedibili d'ufficio*: il processo va avanti anche se la vittima perdona. Solo le lesioni lievi procedibili a querela si fermano con la remissione. Sapere quale qualificazione ha il tuo fatto è il primo passo." },
+            { "q": "Rischio davvero il carcere per una rissa?",       "a": "La rissa semplice ha pene contenute. Ma se qualcuno si fa male seriamente, *la qualificazione può salire* a lesioni gravi o tentato omicidio, con conseguenze molto diverse. La difesa lavora sulla qualificazione giuridica del fatto — è il primo atto difensivo da compiere." },
+            { "q": "Conviene patteggiare?",                           "a": "Dipende dal quadro probatorio. Il patteggiamento *riduce la pena di un terzo* e in certi casi evita la custodia, ma equivale a una condanna. Il rito abbreviato ha lo stesso sconto ma si basa sugli atti. La scelta migliore cambia caso per caso — va valutata con il fascicolo in mano." }
+          ]
+        },
+        "ctaUrgency": "Nei reati contro la persona la qualificazione del fatto si gioca nella fase delle indagini, sulla ricostruzione dinamica e sull'elemento soggettivo. Prima si interviene, più si limita il danno."
+      },
+      {
+        "slug": "rapine-reati-predatori",
+        "title": "Rapine e reati predatori",
+        "subtitle": "Rapina, estorsione, sequestro",
+        "cardDesc": "Pene severe, custodia cautelare, recidiva. La difesa si gioca in larga parte nella fase cautelare.",
+        "icon": "package",
+        "hasDetailPage": true,
+        "ctaText": "Approfondisci",
+        "hero": {
+          "image": "images/hero-rapine.png",
+          "badge": "RAPINE E REATI PREDATORI — DIFESA PENALE",
+          "h1Line1": "Ti accusano di rapina.",
+          "h1Line2": "La difesa si costruisce dalla fase cautelare.",
+          "subtitle": "Rapina aggravata, estorsione, sequestro di persona. Procedimenti che si aprono in custodia cautelare e si giocano in larga parte nella fase delle indagini e davanti al Tribunale del Riesame."
+        },
+        "problemText": "I procedimenti per reati predatori si aprono quasi sempre in custodia cautelare, con un quadro indiziario costruito dal PM su riconoscimenti, video, testimonianze. La difesa lavora sulla solidità di ognuno di quegli elementi — dal valore probatorio del riconoscimento alle aggravanti contestate — perché ogni cedimento del quadro indiziario apre uno spazio per le misure cautelari meno afflittive e per la riqualificazione del fatto.",
+        "approach": {
+          "h2White": "Come costruisco",
+          "h2Gold":  "la tua difesa.",
+          "intro": "Nei reati predatori ogni elemento probatorio — riconoscimento, testimonianza, video — ha un punto debole tecnico. Il mio lavoro è trovarlo prima che il GIP lo usi per tenerti in carcere.",
+          "cards": [
+            { "label": "Identificazione",  "title": "Riconoscimento e identificazione", "desc": "Il riconoscimento personale è una prova soggetta a critica tecnica: condizioni di visione, stress, suggestione. Va analizzato con perizia, non assunto come verità." },
+            { "label": "Concorso",          "title": "Concorso e mera presenza",         "desc": "Essere nel luogo non equivale a partecipare. La distinzione tra concorso attivo, favoreggiamento e mera presenza si decide sugli atti." },
+            { "label": "Aggravanti",        "title": "Armi, gruppo, travisamento",       "desc": "Le aggravanti specifiche della rapina alzano la cornice di pena. Contestarle prima del riesame incide sulla misura cautelare." }
+          ]
+        },
+        "method": {
+          "label": "Come si imposta la difesa",
+          "h2White": "La fase cautelare",
+          "h2Gold":  "è la prima battaglia.",
+          "subtitle": "Nei procedimenti per rapina la posizione difensiva si imposta nelle 48 ore della convalida e nei 10 giorni del riesame. Quello che si ottiene lì pesa su tutto il resto.",
+          "steps": [
+            { "num": "01", "title": "Convalida e contestazioni",   "desc": "Le 96 ore della convalida sono il primo spazio di intervento: contestare la gravità indiziaria, le esigenze cautelari, l'adeguatezza della misura." },
+            { "num": "02", "title": "Tribunale del Riesame",       "desc": "10 giorni per portare al collegio elementi nuovi e contestare l'ordinanza. È spesso il momento decisivo per ottenere misure meno afflittive." },
+            { "num": "03", "title": "Qualificazione e aggravanti", "desc": "Contestare le aggravanti specifiche (armi, gruppo, travisamento) e la qualificazione (rapina vs furto con strappo) incide sulla cornice di pena." }
+          ]
+        },
+        "faq": {
+          "label": "Obiezioni",
+          "h2White": "Quello che stai pensando.",
+          "h2Gold":  "Le risposte.",
+          "items": [
+            { "q": "Mi hanno riconosciuto dalla vittima.", "a": "Il riconoscimento è *una prova soggetta a forte critica tecnica*. È influenzato dallo stress del momento, condizionabile dalla modalità con cui viene eseguito. La difesa lavora sull'attendibilità analizzando le condizioni, la procedura, l'esposizione a elementi suggestivi." },
+            { "q": "Il mio complice ha già confessato e mi ha tirato in mezzo.", "a": "La chiamata in correità — cioè la dichiarazione di un co-imputato che accusa un altro — *richiede riscontri esterni indipendenti* per avere valore probatorio. Senza quei riscontri, non regge da sola. La difesa lavora esattamente su questo: smontare la dichiarazione accusatoria o dimostrare che i presunti riscontri non lo sono." },
+            { "q": "C'è un video.", "a": "I video mostrano immagini, non colpevoli. *Qualità, risoluzione, angolazione, condizioni di luce, identificabilità del soggetto*: tutti elementi che si valutano con perizia tecnica. La forza probatoria di un video dipende da questi parametri, non dall'impressione che lascia a una prima visione." },
+            { "q": "Non ho rapinato nessuno. Ero solo presente.", "a": "Il concorso in rapina è una delle contestazioni più frequenti — e più contestabili. *Essere presenti non equivale a partecipare.* La difesa lavora sulla distinzione tra concorso attivo, favoreggiamento e mera presenza. La differenza può valere anni di pena." },
+            { "q": "Rischio davvero 5 o 10 anni?", "a": "La rapina semplice prevede da 4 a 10 anni. Con aggravanti (armi, gruppo, travisamento) si sale da 6 a 20 anni. *La pena effettiva dipende dalla qualificazione del fatto*, dalle attenuanti, dal rito scelto. La forbice è ampia: ogni elemento procedurale e sostanziale può incidere su dove si colloca la pena finale." },
+            { "q": "Posso ottenere i domiciliari?", "a": "Dipende dalle esigenze cautelari: pericolo di fuga, reiterazione, inquinamento prove. *I domiciliari sono una misura meno afflittiva del carcere* e il giudice può concederli se le esigenze cautelari sono soddisfatte con una misura meno restrittiva. Si chiede con il riesame o con istanza al GIP." },
+            { "q": "Ho precedenti. E' finita?", "a": "I precedenti complicano il quadro, in particolare per la recidiva e le misure cautelari. Ma *ogni fatto è un procedimento autonomo*. La difesa si concentra su questo caso, non sulla tua storia. La valutazione va fatta sul fascicolo concreto che hai davanti." }
+          ]
+        },
+        "ctaUrgency": "Nei procedimenti per rapina i tempi sono compressi: dalla convalida al riesame passano pochi giorni. La difesa che lavora bene sui margini cautelari fa la differenza."
+      },
+      {
+        "slug": "stupefacenti",
+        "title": "Stupefacenti",
+        "subtitle": "Detenzione, spaccio, traffico",
+        "cardDesc": "La differenza tra uso personale e spaccio può valere anni di carcere. Si decide in istruttoria, non in aula.",
+        "icon": "pill",
+        "hasDetailPage": true,
+        "ctaText": "Approfondisci",
+        "hero": {
+          "image": "images/hero-stupefacenti.png",
+          "badge": "STUPEFACENTI — DIFESA PENALE",
+          "h1Line1": "La differenza tra uso personale e spaccio",
+          "h1Line2": "si decide nei dettagli del fascicolo.",
+          "subtitle": "Fermato con sostanze, contante o bilancino. La polizia raccoglie una prima narrativa, il PM la struttura. La difesa lavora sugli stessi elementi — perizie, contesto personale, modalità di confezionamento — per costruire la lettura alternativa nel fascicolo."
+        },
+        "problemText": "I procedimenti per stupefacenti si giocano quasi sempre sulla qualificazione del fatto: uso personale o spaccio, detenzione o traffico. Quella distinzione si costruisce in istruttoria, con gli atti, con le perizie. Non in udienza, quando è tardi. Il PM usa ogni elemento materiale per costruire il profilo dello spacciatore. Il bilancino, i contanti, il modo in cui la sostanza era confezionata: ognuno ha un'altra lettura. La difesa costruisce quella lettura adesso — non quando il profilo è già solidificato nel fascicolo.",
+        "approach": {
+          "h2White": "Come costruisco",
+          "h2Gold":  "la tua difesa.",
+          "intro": "Nei procedimenti per stupefacenti la qualificazione si gioca su dettagli tecnici che il PM già domina. Il mio lavoro è smontarli uno a uno — con perizie, documentazione, ricostruzione del contesto personale.",
+          "cards": [
+            { "label": "Contestazione chiave",   "title": "Detenzione e spaccio",          "desc": "La quantità, la modalità di confezionamento, la presenza di bilancini o contanti: ogni elemento è usato dall'accusa per costruire il profilo dello spacciatore. Ogni elemento può essere smontato dalla difesa." },
+            { "label": "Quantità significative", "title": "Detenzione oltre uso personale", "desc": "Quando la quantità supera i parametri dell'uso personale, l'accusa costruisce il profilo dello spacciatore. La difesa parte dalla documentazione del consumo abituale, dalla provenienza della sostanza e dal contesto personale." },
+            { "label": "Moltiplicatore di pena", "title": "Aggravanti",                     "desc": "Vicinanza a scuole, coinvolgimento di minori, quantità ingenti — le aggravanti incidono sulle pene. Contestarle fin dall'inizio è un passaggio tecnico per il quadro sanzionatorio." }
+          ]
+        },
+        "method": {
+          "label": "Come si imposta la difesa",
+          "h2White": "La qualificazione del fatto",
+          "h2Gold":  "si decide prima dell'aula.",
+          "subtitle": "Nei procedimenti per stupefacenti la differenza tra uso personale e spaccio si gioca quasi sempre sugli stessi elementi: la quantità, il modo in cui la sostanza era confezionata, la presenza di accessori (bilancino, contante), il contesto personale del soggetto. Il PM costruisce il profilo dello spacciatore dall'insieme di questi indizi. La difesa lavora elemento per elemento.",
+          "steps": [
+            { "num": "01", "title": "Comprendere il contesto",       "desc": "Uso personale o spaccio non si decide in aula. Si decide prima, nella fase delle indagini, con gli elementi che il PM raccoglie e quelli che non raccoglie." },
+            { "num": "02", "title": "Proteggere dalla narrazione",   "desc": "Bilancino, contante, precedenti: il profilo da spacciatore si costruisce con indizi. La difesa lo smonta elemento per elemento." },
+            { "num": "03", "title": "Riqualificare il fatto",        "desc": "La riqualificazione in uso personale si costruisce nella fase delle indagini: documentazione del consumo abituale, ricostruzione del contesto personale, perizie tossicologiche." }
+          ]
+        },
+        "faq": {
+          "label": "Obiezioni",
+          "h2White": "Quello che stai pensando.",
+          "h2Gold":  "Le risposte.",
+          "items": [
+            { "q": "Avevo il bilancino.",                            "a": "Il bilancino è *un indizio, non una prova*. È uno strumento che si contesta dimostrando usi alternativi — pesatura di alimenti, uso professionale, hobbistica — e soprattutto dimostrando che l'insieme degli elementi accessori non configura il profilo dello spacciatore. La difesa lavora sul contesto complessivo, non sul singolo oggetto." },
+            { "q": "La quantità era troppa per l'uso personale.",   "a": "*Non esiste un limite automatico* che trasforma l'uso personale in spaccio. La legge parla di quantità modica rispetto all'uso abituale, della sostanza specifica, delle condizioni personali del soggetto. Un consumatore abituale può detenere quantità maggiori senza che questo equivalga a cessione. Si dimostra con documentazione, testimonianze, e analisi della storia personale." },
+            { "q": "Hanno le intercettazioni con il mio linguaggio in codice.", "a": "Il gergo *non è una confessione*. Estrarre frasi da una conversazione e interpretarle come prova di spaccio è uno dei meccanismi accusatori più frequenti. La difesa decodifica il contesto: cosa si stava davvero dicendo, in quale rapporto, con quale frequenza. Il contesto cambia tutto." },
+            { "q": "Mi rovino la fedina penale per sempre?",         "a": "Se il fatto viene riqualificato come uso personale, *non è un reato ma un illecito amministrativo* — non va sulla fedina penale. Anche in caso di condanna penale, dopo un periodo dalla fine della pena è possibile chiedere la riabilitazione, che cancella la condanna dal casellario. La risposta dipende dall'esito del tuo caso specifico." },
+            { "q": "Rischio il carcere?",                           "a": "Per uso personale no — è un illecito amministrativo, non penale. Per spaccio di lieve entità, *esistono alternative al carcere*: la messa alla prova, la sospensione condizionale, i lavori di pubblica utilità. La Corte Costituzionale ha recentemente ampliato queste possibilità. Si valuta caso per caso con il fascicolo in mano." },
+            { "q": "Ho dei precedenti. E' finita per me?",           "a": "I precedenti rendono il quadro più complesso, ma *non determinano automaticamente l'esito*. Ogni procedimento è un caso a se'. La difesa lavora sulla specificità del fatto attuale, non sulla tua storia passata. La valutazione va fatta sul fascicolo concreto." },
+            { "q": "Quanto costa un avvocato per un caso di droga?", "a": "Il costo dipende dalla complessità del caso, dalla fase processuale e dal tipo di procedimento. *Il primo contatto serve a capire la situazione*. Onorari concordati per iscritto, in base ai parametri forensi e alla complessità del caso." }
+          ]
+        },
+        "ctaUrgency": "Nei procedimenti per stupefacenti la qualificazione giuridica — spaccio o uso personale — si costruisce nella fase delle indagini, con gli atti e con le perizie. La difesa interviene su quegli stessi elementi, non sull'aula."
+      },
+      {
+        "slug": "reati-di-strada",
+        "title": "Reati di strada e contesti di gruppo",
+        "subtitle": "Rissa, resistenza, porto d'arma",
+        "cardDesc": "Rissa, resistenza, porto d'arma, reati commessi in branco. La conoscenza diretta di certi contesti è dove parte la difesa.",
+        "icon": "users",
+        "hasDetailPage": true,
+        "ctaText": "Approfondisci",
+        "hero": {
+          "image": "images/hero-reati-strada.png",
+          "badge": "REATI DI STRADA — DIFESA PENALE",
+          "h1Line1": "Reati commessi in strada, spesso in gruppo.",
+          "h1Line2": "La difesa parte dalla ricostruzione dei ruoli.",
+          "subtitle": "Rissa, resistenza a pubblico ufficiale, porto d'arma, danneggiamento. Quando il fatto avviene di notte, in branco, in pochi minuti, l'accusa tende a livellare le posizioni. La difesa lavora sulla distinzione dei ruoli effettivi — chi ha fatto cosa, chi era presente passivamente — prima che diventi la lettura ufficiale del fascicolo."
+        },
+        "problemText": "I reati di strada e quelli commessi in gruppo si caratterizzano per dinamiche concitate, testimoni concorrenti, video parziali, dichiarazioni rese sotto stress. Il primo verbale tende a uniformare i ruoli — chi era nel gruppo finisce contestato come se fosse autore. La difesa lavora su quello stesso materiale per separare le posizioni, contestare le qualificazioni più gravi quando non reggono, e ricostruire la dinamica reale dei fatti.",
+        "approach": {
+          "h2White": "Come costruisco",
+          "h2Gold":  "la tua difesa.",
+          "intro": "In questi procedimenti gli elementi materiali — video, testimonianze, posizione fisica al momento dei fatti — pesano più delle dichiarazioni. Il mio lavoro è smontare la lettura semplicistica del primo verbale, separare i ruoli e contestare le qualificazioni più gravi quando non reggono.",
+          "cards": [
+            { "label": "Distinzione dei ruoli",  "title": "Concorso e mera presenza",     "desc": "Essere nel gruppo non equivale a partecipare al fatto. Concorso attivo, favoreggiamento e mera presenza sono figure giuridiche distinte. La differenza può valere anni di pena." },
+            { "label": "Qualificazione del fatto","title": "Rissa, lesioni, danneggiamento","desc": "La stessa azione può essere qualificata come rissa semplice, rissa aggravata o lesioni — con cornici di pena molto diverse. La qualificazione iniziale del PM non è quella finale." },
+            { "label": "Strumenti contestati",   "title": "Porto d'arma e oggetti atti a offendere", "desc": "Coltello, sfollagente, oggetti generici: la qualificazione come arma propria, impropria o oggetto atto a offendere cambia tutto." }
+          ]
+        },
+        "method": {
+          "label": "Come si imposta la difesa",
+          "h2White": "I ruoli si decidono",
+          "h2Gold":  "prima dell'udienza.",
+          "subtitle": "Nei procedimenti di gruppo l'accusa tende a costruire una posizione unica per tutti i partecipanti. La difesa lavora elemento per elemento: dichiarazioni, video, posizione fisica al momento dei fatti.",
+          "steps": [
+            { "num": "01", "title": "Ricostruire la dinamica",      "desc": "Cosa è successo, in quanti minuti, in quale ordine. Il primo verbale è quasi sempre semplificato. La difesa lavora sui dettagli che separano i fatti." },
+            { "num": "02", "title": "Separare le posizioni",        "desc": "Chi ha colpito, chi era presente, chi è arrivato dopo. Il concorso non si presume — va dimostrato fatto per fatto, persona per persona." },
+            { "num": "03", "title": "Contestare le aggravanti",     "desc": "Le aggravanti (uso di armi, premeditazione, fine di lucro, danni gravi) trasformano cornici di pena moderate in pene serie. Si contestano nella fase delle indagini." }
+          ]
+        },
+        "faq": {
+          "label": "Obiezioni",
+          "h2White": "Quello che stai pensando.",
+          "h2Gold":  "Le risposte.",
+          "items": [
+            { "q": "C'è un video della rissa.",                       "a": "I video mostrano sequenze, non sempre ruoli. *Qualità dell'immagine, angolazione, identificabilità del soggetto* sono elementi tecnici che si analizzano con perizia. La difesa lavora sulla forza probatoria reale del video, non sull'impressione di chi lo guarda per primo." },
+            { "q": "Hanno raccolto cinque testimoni contro di me.",   "a": "Le testimonianze raccolte sul posto, sotto stress e nel concitato, *hanno valore probatorio ma sono soggette a critica tecnica*: condizioni di visione, stato emotivo, esposizione a elementi suggestivi. La difesa lavora sull'attendibilità singola e sulla coerenza interna del quadro." },
+            { "q": "Mi accusano di concorso anche se non ho colpito nessuno.", "a": "Il concorso in reato richiede *un contributo causale o morale al fatto*, non la semplice presenza. Stare nel gruppo non equivale ad aver concorso. La distinzione tra concorso attivo, favoreggiamento e mera presenza è giuridicamente precisa e probatoriamente impegnativa." },
+            { "q": "Avevo un coltello addosso ma non l'ho usato.",    "a": "Il porto di un oggetto e il suo uso sono due fatti distinti, con conseguenze diverse. *Anche la qualificazione dell'oggetto* — arma propria, arma impropria, oggetto atto a offendere — cambia la cornice di pena. La difesa lavora su entrambi i piani." },
+            { "q": "Resistenza a pubblico ufficiale: che pena rischio?", "a": "La resistenza a pubblico ufficiale ha pene contenute, ma *l'aggravante dell'uso di violenza o minaccia qualificata* può alzarle. Conta la dinamica reale dei fatti — chi ha iniziato, in che fase è scattata l'azione del pubblico ufficiale, se c'erano alternative. Si valuta sul fascicolo concreto." },
+            { "q": "Eravamo tutti ubriachi, conta?",                  "a": "Lo stato di alterazione è rilevante in modo diverso a seconda del reato: può attenuare in alcune ipotesi, può aggravare in altre. *Non è una scusante automatica* — richiede un'analisi specifica della dinamica e del nesso con il fatto contestato." },
+            { "q": "Quanto costa un avvocato per una rissa?",         "a": "Il costo dipende dalla complessità del fatto, dal numero di persone coinvolte e dalla fase processuale. *Il primo contatto serve a capire la situazione*. Onorari concordati per iscritto, in base ai parametri forensi e alla complessità del caso." }
+          ]
+        },
+        "ctaUrgency": "Nei reati commessi in gruppo la posizione di ognuno si costruisce nella fase delle indagini. Prima si interviene per separare i ruoli, più si limita il danno della qualificazione complessiva."
+      },
+      {
+        "slug": "circolazione-stradale",
+        "title": "Circolazione stradale e guida in stato di ebbrezza",
+        "subtitle": "Sospensione patente, lavori di pubblica utilità",
+        "cardDesc": "Sospensione o revoca patente, aggravanti, accesso ai lavori socialmente utili. Ogni dettaglio procedurale può cambiare l'esito.",
+        "icon": "car-front",
+        "hasDetailPage": true,
+        "ctaText": "Approfondisci",
+        "hero": {
+          "image": "images/hero-circolazione.png",
+          "badge": "CIRCOLAZIONE STRADALE — DIFESA PENALE",
+          "h1Line1": "Una guida finita male non finisce",
+          "h1Line2": "per forza in condanna.",
+          "subtitle": "Guida in stato di ebbrezza, sotto l'effetto di sostanze, omicidio stradale, fuga dopo incidente. Sono procedimenti che si chiudono spesso con riti alternativi o lavori di pubblica utilità — ma la scelta va fatta a fascicolo aperto, non in aula, e non vale per ogni caso."
+        },
+        "problemText": "Un'accusa per guida in stato di ebbrezza ha effetti immediati: patente ritirata, eventualmente l'auto sequestrata. Il PM struttura il fascicolo con verbale dell'intervento, alcoltest, eventuali testimoni dell'incidente. La difesa lavora sulla validità degli accertamenti, sui margini di errore strumentali, e sulle alternative procedurali — messa alla prova, sospensione del procedimento, lavori di pubblica utilità — che possono evitare la condanna penale.",
+        "approach": {
+          "h2White": "Come costruisco",
+          "h2Gold":  "la tua difesa.",
+          "intro": "Nei procedimenti per guida in stato di ebbrezza i margini di intervento si giocano sulla validità degli accertamenti, sulla qualificazione delle aggravanti, e sulle alternative al processo ordinario. Il mio lavoro è valutare il fascicolo prima di scegliere il rito — perché la scelta del rito condiziona l'esito.",
+          "cards": [
+            { "label": "Accertamento contestato",   "title": "Validità dell'alcoltest",      "desc": "Taratura degli strumenti, modalità di esecuzione, tempi tra accertamenti: ogni vizio procedurale è una crepa contestabile. La difesa lavora sulla documentazione tecnica, non sulla sola lettura del risultato." },
+            { "label": "Cornice di pena",           "title": "Aggravanti specifiche",        "desc": "Tasso alcolemico sopra 1,5 g/l, incidente con feriti, fuga dopo l'incidente: aggravanti che cambiano radicalmente la pena. Contestarle nella fase iniziale incide sulla scelta del rito e sull'esito." },
+            { "label": "Alternative al processo",   "title": "Lavori di pubblica utilità",   "desc": "Per la guida in stato di ebbrezza la legge prevede la sostituzione della pena con lavori di pubblica utilità (art. 186, comma 9-bis, C.d.S.): niente condanna penale a fedina, riduzione del periodo di sospensione della patente." }
+          ]
+        },
+        "method": {
+          "label": "Come si imposta la difesa",
+          "h2White": "Ogni dettaglio procedurale",
+          "h2Gold":  "conta.",
+          "subtitle": "Nei procedimenti per guida in stato di ebbrezza i margini si giocano sulle prove tecniche e sulle alternative procedurali. Una difesa che lavora bene su questi due piani può evitare la condanna penale, anche in casi apparentemente compromessi.",
+          "steps": [
+            { "num": "01", "title": "Verificare l'accertamento", "desc": "Taratura dello strumento, intervallo tra le due misurazioni, modalità di esecuzione. Vizi procedurali documentati incidono sulla forza probatoria dell'alcoltest." },
+            { "num": "02", "title": "Qualificare le aggravanti", "desc": "Soglia alcolemica, incidente, feriti, fuga: ogni aggravante alza la cornice di pena. La difesa lavora sui margini, non sulle etichette del primo verbale." },
+            { "num": "03", "title": "Scegliere il rito",         "desc": "Patteggiamento, abbreviato, lavori di pubblica utilità, messa alla prova: ogni opzione ha pro e contro diversi. La scelta migliore dipende dal fascicolo specifico." }
+          ]
+        },
+        "faq": {
+          "label": "Obiezioni",
+          "h2White": "Quello che stai pensando.",
+          "h2Gold":  "Le risposte.",
+          "items": [
+            { "q": "Ho rifiutato l'alcoltest.", "a": "Il rifiuto dell'alcoltest *configura un reato autonomo*, punito con pene equivalenti a quelle previste per il tasso alcolemico più alto. Non è quindi una via di uscita — ma anche qui esistono difese tecniche su come è stata formulata la richiesta e sulle condizioni in cui è avvenuta." },
+            { "q": "Tasso alcolemico oltre 1,5 g/l. Rischio davvero il carcere?", "a": "La fascia oltre 1,5 g/l è la più severa, ma *la pena detentiva non è automatica*. Lavori di pubblica utilità, messa alla prova e sospensione condizionale sono percorribili anche in questa fascia, salvo aggravanti specifiche (incidente, feriti, recidiva)." },
+            { "q": "C'è stato un incidente con feriti.", "a": "L'incidente con feriti aggrava il quadro e può configurare lesioni stradali — *un reato autonomo con cornici di pena specifiche*. Va valutata la dinamica del sinistro, il nesso causale con lo stato di alterazione, e l'eventuale concorso di colpa della controparte." },
+            { "q": "Mi possono revocare la patente per sempre?", "a": "La revoca della patente è prevista nei casi più gravi: tasso alcolemico altissimo, omicidio stradale, recidiva. *Non è automatica per ogni condanna* — dipende dalla qualificazione del fatto e dalle aggravanti. La difesa lavora per evitarla quando i margini ci sono." },
+            { "q": "Sono recidivo, è la seconda volta.", "a": "La recidiva aggrava la pena e può comportare la revoca della patente, *ma non esclude tutte le alternative al processo ordinario*. Si valuta caso per caso, in base alla qualificazione del fatto attuale e alla distanza temporale dal precedente." },
+            { "q": "Posso fare lavori di pubblica utilità?", "a": "I lavori di pubblica utilità sono *espressamente previsti per la guida in stato di ebbrezza* (art. 186, comma 9-bis, Codice della Strada): chi li svolge non subisce condanna penale a fedina, e il periodo di sospensione della patente si riduce alla metà. Non sono accessibili in caso di incidente con feriti." },
+            { "q": "Quanto costa un avvocato per guida in stato di ebbrezza?", "a": "Il costo dipende dalla fase del procedimento e dalla complessità del caso (presenza di incidente, soglia alcolemica, recidiva). *Il primo contatto serve a capire la situazione*. Onorari concordati per iscritto, in base ai parametri forensi e alla complessità del caso." }
+          ]
+        },
+        "ctaUrgency": "Nei procedimenti per guida in stato di ebbrezza i tempi contano: la difesa che lavora sui margini procedurali e sulle alternative al processo va impostata prima dell'udienza, non quando è già in calendario."
+      },
+      {
+        "slug": "_catchall",
+        "title": "Il tuo caso non è in elenco?",
+        "subtitle": null,
+        "cardDesc": "Anche se la situazione non rientra in queste categorie, valuteremo insieme se posso seguirla.",
+        "icon": "message-square",
+        "hasDetailPage": false,
+        "ctaText": "Parlane con me",
+        "href": "#contatti"
+      }
+    ]
+  },
+
+  "comeFunziona": {
+    "label": "Come Funziona",
+    "h2White": "Tre passaggi.",
+    "h2Gold":  "Nessuna sorpresa.",
+    "steps": [
+      { "num": "01", "title": "Mi scrivi qui",                       "desc": "Nome e numero. Niente dettagli del caso per iscritto: il segreto professionale copre la conversazione vocale, non un form web." },
+      { "num": "02", "title": "Ti richiamo entro 24 ore",            "desc": "Entro 24 ore ti ricontatto personalmente. Ti spiego la situazione senza linguaggio tecnico. Ti dico se posso aiutarti." },
+      { "num": "03", "title": "Ti do un quadro onesto",              "desc": "Se posso aiutarti: ti dico come, in che termini, con che tempi. Se non posso: te lo dico e ti indico chi può." }
+    ]
+  },
+
+  "chiSono": {
+    "label": "Chi Sono"
+  },
+
+  "method": {
+    "label": "Il Metodo",
+    "quote": "Il codice penale è quello che ti inguaia. Il codice di procedura penale è quello che ti tira fuori. Se lo sai usare.",
+    "pillars": [
+      { "num": "01", "icon": "lock",         "title": "Riservatezza", "text": "Quello che ci diciamo qui resta qui — è il segreto professionale, non una cortesia. È un obbligo deontologico che prendo sul serio quanto la tua libertà." },
+      { "num": "02", "icon": "eye",          "title": "Verita'",      "text": "Non ti dico quello che vuoi sentire. Ti dico dove stanno i margini e dove non stanno. L'onestà prima della firma vale più di qualsiasi promessa." },
+      { "num": "03", "icon": "shield-check", "title": "Difesa",       "text": "Il PM ha già la sua versione dei fatti. La difesa è costruire l'altra — quella che il giudice non ha ancora sentito." }
+    ]
+  },
+
+  "discrezione": {
+    "label": "Discrezione",
+    "h2White": "I miei risultati non li leggi qui.",
+    "h2Gold":  "E non è un caso.",
+    "paragraphs": [
+      "Su questo sito non troverai nomi di clienti, sentenze incorniciate, casi in vetrina. Non perché i risultati non contino — contano, ed è da lì che un avvocato si giudica. Ma chi pubblica il caso di un cliente per convincerne un altro, prima o poi pubblicherà anche il tuo.",
+      "La stessa riservatezza che proteggerà te mi vieta di mettere in piazza gli altri. Di alcuni procedimenti ha già scritto la cronaca, e di quelli posso parlare. Del tuo non dirò niente a nessuno — è esattamente ciò che chiedi a chi difende la tua libertà.",
+      "Quello che posso fare per te lo capiamo parlando. In privato."
+    ],
+    "cta": "Parliamone in privato"
+  },
+
+  "faq": {
+    "label": "Domande",
+    "h2White": "Quello che stai pensando.",
+    "items": [
+      { "q": "\"E se sono colpevole?\"",                       "a": "Non sono qui per giudicarti, per quello ci sono già i giudici. Difendo le persone, non le azioni. Quello che mi racconti resta coperto dal segreto professionale e serve solo a costruire la difesa migliore possibile." },
+      { "q": "\"Cosa succede quando ti contatto?\"",           "a": "Mi racconti cosa è successo e io ti dico con onestà se e come posso aiutarti. Il primo contatto serve a capire la situazione, senza che tu debba decidere niente sul momento." },
+      { "q": "\"Quanto costa?\"",                              "a": "Il primo contatto serve a valutare se posso aiutarti. Onorari concordati per iscritto, in base alla complessità del caso e ai parametri forensi." },
+      { "q": "\"Chi lo sapra'?\"",                             "a": "Il segreto professionale copre tutto, incluso il fatto stesso che mi hai cercato." },
+      { "q": "\"È troppo tardi?\"",                            "a": "Nella maggior parte dei casi, no. Nel penale però il tempo gioca per l'accusa: senza una difesa attiva, la sua versione resta l'unica nel fascicolo." },
+      { "q": "\"Posso cambiare avvocato?\"",                   "a": "Si', in qualsiasi momento. E' un tuo diritto." },
+      { "q": "\"Il mio avvocato non è un penalista.\"",        "a": "Un buon avvocato non è automaticamente un buon penalista. In un procedimento penale serio serve pratica esclusivamente penalistica e quotidiana." }
+    ]
+  },
+
+  "contattiSection": {
+    "label": "Contatti",
+    "h2White": "Quando il procedimento è già aperto,",
+    "h2Gold":  "la difesa parte adesso.",
+    "urgencyDefault": "Non ti chiedo di decidere adesso. Ti chiedo di raccontarmi cosa è successo. Entro 24 ore ti rispondo personalmente — se posso aiutarti, in che termini, e cosa serve fare per primo.",
+    "trustList": [
+      "Riservato e coperto dal segreto professionale",
+      "Seguo anche arresti e fermi in corso."
+    ]
+  },
+
+  "form": {
+    "title": "Richiedi una consulenza riservata",
+    "intro": "Mi lasci nome e numero, la richiamo io. I dettagli del caso me li racconta direttamente — non li scriva qui.",
+    "fields": [
+      { "id": "f-name",  "type": "text", "label": "Nome",     "placeholder": "Come ti chiami",            "required": true },
+      { "id": "f-phone", "type": "tel",  "label": "Telefono", "placeholder": "Un numero dove posso chiamarti", "required": true }
+    ],
+    "ctaText": "Invia richiesta",
+    "successTitle": "Richiesta ricevuta.",
+    "successBody": "Ti contatterò personalmente entro 24 ore.<br>Nel frattempo, non parlare del tuo caso con nessuno che non sia il tuo avvocato.",
+    "responseTimeBadge": "Risposta personale entro 24 ore",
+    "gdpr": "Inviando acconsenti al trattamento secondo l'<a href=\"privacy.html\" style=\"color:var(--gold);text-decoration:underline\">informativa privacy</a>.",
+    "provider": "emailjs",
+    "emailjs": {
+      "serviceId":  "service_axen7bv",
+      "templateId": "template_i41j5j8",
+      "publicKey":  "09DDAzcm8wfSR0ANQ"
+    },
+    "fallbackMessage": "Invio non riuscito. Scrivici direttamente a niccolo.vecchioni@nclaw.it"
+  },
+
+  "chat": {
+    "enabled": true,
+    "scriptSrc": "chat-widget.js"
+  },
+
+  "quoteFinale": "Mi auguro di non rivedervi per ragioni lavorative. Il giorno in cui non dovrete più chiamarmi sarà il giorno in cui sarete <em>fuori dai guai.</em>",
+  "quoteFinaleCta": "Contattami",
+
+  "footer": {
+    "brandDesc": "Penalista a Milano. Difesa in procedimenti penali complessi a tutti i gradi di giudizio. Segreto professionale.",
+    "year": 2026,
+    "legalLine": "Iscritto all'Ordine degli Avvocati di Milano"
+  },
+
+  "legal": {
+    "privacy":    { "title": "Privacy Policy",        "draft": true },
+    "cookie":     { "title": "Cookie Policy",         "draft": true },
+    "noteLegali": { "title": "Note Legali",           "draft": true }
+  },
+
+  "demoMeta": {
+    "isDemo": false,
+    "agencyName": null,
+    "agencyUrl": null,
+    "ctaPersonalUrl": null,
+    "ctaPersonalLabel": "Parliamone",
+    "createdAt": null,
+    "createdFromUrl": null
+  }
+}
